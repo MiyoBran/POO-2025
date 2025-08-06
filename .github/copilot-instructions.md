@@ -129,30 +129,50 @@ mvn package
 
 ## 📚 Contexto para Copilot
 
+### ⚠️ JERARQUÍA DE INSTRUCCIONES (ORDEN DE PRIORIDAD)
+
+1. **🎓 INSTRUCCIONES DE CÁTEDRA** (`.github/buenas-practicas-POO.instructions.md`)
+   - **MÁXIMA PRIORIDAD** - Instrucciones oficiales del curso
+   - **NO MODIFICAR** - Este archivo contiene lineamientos de la cátedra
+   - **PREVALECE** sobre cualquier otra instrucción en caso de conflicto
+
+2. **📝 BUENAS PRÁCTICAS DE DESARROLLO**
+   - `.github/java.instructions.md` - Estándares para código Java
+   - `.github/java-docs.prompt.md` - Convenciones para JavaDoc  
+   - `.github/java-junit.prompt.md` - Estándares para tests JUnit
+   - `.github/markdown.instructions.md` - Formato para archivos Markdown
+
+3. **🏗️ INSTRUCCIONES DEL PROYECTO**
+   - `.github/copilot-instructions.md` - Contexto y estructura del proyecto POO-2025
+
 ### Al trabajar en este proyecto:
 
-1. **Mantener consistencia** con las convenciones establecidas
-2. **Documentar código** usando JavaDoc apropiadamente
-3. **Crear tests** para cada nuevo ejercicio implementado
-4. **Seguir estructura Maven** estándar
-5. **Organizar por temática** según las categorías definidas
+1. **Consultar SIEMPRE** las instrucciones de cátedra primero
+2. **Mantener consistencia** con las convenciones establecidas
+3. **Documentar código** usando JavaDoc apropiadamente
+4. **Crear tests** para cada nuevo ejercicio implementado
+5. **Seguir estructura Maven** estándar
+6. **Organizar por temática** según las categorías definidas
+7. **NO MODIFICAR** archivos de instrucciones de cátedra
 
 ### Al crear nuevos ejercicios:
 
-1. **Identificar la categoría** POO correspondiente
-2. **Usar numeración secuencial** dentro de cada categoría
-3. **Incluir documentación** clara de conceptos demostrados
-4. **Implementar método `ejecutar()`** para demostración
-5. **Agregar tests unitarios** completos
-6. **Actualizar README** si es necesario
+1. **Verificar requisitos** en instrucciones de cátedra
+2. **Identificar la categoría** POO correspondiente
+3. **Usar numeración secuencial** dentro de cada categoría
+4. **Incluir documentación** clara de conceptos demostrados
+5. **Implementar método `ejecutar()`** para demostración
+6. **Agregar tests unitarios** completos
+7. **Actualizar README** si es necesario
 
 ### Al actualizar con TPs:
 
-1. **Reemplazar ejemplos** con ejercicios oficiales del curso
-2. **Mantener estructura** y convenciones existentes
-3. **Actualizar documentación** según nuevos requisitos
-4. **Verificar compatibilidad** con IDEs y plataformas
-5. **Ejecutar tests** para asegurar funcionalidad
+1. **Seguir especificaciones** de la cátedra estrictamente
+2. **Reemplazar ejemplos** con ejercicios oficiales del curso
+3. **Mantener estructura** y convenciones existentes
+4. **Actualizar documentación** según nuevos requisitos
+5. **Verificar compatibilidad** con IDEs y plataformas
+6. **Ejecutar tests** para asegurar funcionalidad
 
 ## 🔄 Estado Actual del Proyecto
 

@@ -1,10 +1,20 @@
-# 🤖 Instrucciones para GitHub Copilot
+# 🤖 Instrucciones para GitHub Copilo---
 
-Este archivo contiene las instrucciones y contexto necesario para que GitHub Copilot mantenga consistencia en todas las conversaciones relacionadas con el proyecto **POO-2025**.
+💡 **Para mantener el contexto completo, Copilot consulta automáticamente todos los archivos en `.github/`**Este archivo contiene las instrucciones y contexto necesario para que GitHub Copilot mantenga consistencia en todas las conversaciones relacionadas con el proyecto **POO-2025**.
 
-## 📄 Archivo Principal de Instrucciones
+## 📄 Archivos de Instrucciones
 
-Las instrucciones completas se encuentran en: **`.github/copilot-instructions.md`**
+### 🎓 Instrucciones de Cátedra (PRIORIDAD MÁXIMA)
+- **`.github/buenas-practicas-POO.instructions.md`** - ⚠️ **Instrucciones oficiales - NO MODIFICAR**
+
+### Instrucciones del Proyecto
+- **`.github/copilot-instructions.md`** - Contexto completo del proyecto POO-2025
+
+### Buenas Prácticas de Desarrollo
+- **`.github/java.instructions.md`** - Estándares para código Java
+- **`.github/java-docs.prompt.md`** - Convenciones para JavaDoc
+- **`.github/java-junit.prompt.md`** - Estándares para tests JUnit
+- **`.github/markdown.instructions.md`** - Formato para archivos Markdown
 
 ## 🎯 Resumen Rápido
 
