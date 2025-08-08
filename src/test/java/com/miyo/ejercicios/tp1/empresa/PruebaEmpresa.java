@@ -1,23 +1,20 @@
 package com.miyo.ejercicios.tp1.empresa;
 
-import com.miyo.ejercicios.tp1.empresa.Departamento;
-import com.miyo.ejercicios.tp1.empresa.Empleado;
-import com.miyo.ejercicios.tp1.empresa.Empresa;
-
 public class PruebaEmpresa {
 
 	public static void main(String[] args) {
 
-		Empresa arcor = new Empresa("Arcor", "Arroyito C�rdoba");
+		Empresa arcor = new Empresa("Arcor", "Arroyito Cordoba");
 
 		// agregando departamentos y empleados a la empresa
 
 		Departamento gerencia = arcor.agregarDepartamento(1, "Gerencia");
 		Departamento ventas = arcor.agregarDepartamento(2, "Ventas");
 		Departamento produccion = arcor.agregarDepartamento(3, "Produccion");
-
+		
+		// agregando empleados a los departamentos, con formato "ID, Nombre, Supervisor, Departamento"
 		Empleado gerente = arcor.agregarEmpleado(1, "Juan Perez", null, gerencia);
-		Empleado secretaria 2= arcor.agregarEmpleado(2, "Silvia Perez", gerente, gerencia);
+		Empleado secretaria2= arcor.agregarEmpleado(2, "Silvia Perez", gerente, gerencia);
 		Empleado supervisorVentas = arcor.agregarEmpleado(3, "Ignacio Ramirez", gerente, ventas);
 		Empleado operarioVentas = arcor.agregarEmpleado(4, "Ruben Aguirre", supervisorVentas, ventas);
 		Empleado supervisorProd = arcor.agregarEmpleado(5, "Carlos Villagran", gerente, produccion);
@@ -36,7 +33,7 @@ public class PruebaEmpresa {
 
 		// supervisor de un empleado
 		System.out.println();
-		System.out.println("supervisor de secretaria: " + arcor.supervisor(secretaria));
+		System.out.println("supervisor de secretaria: " + arcor.supervisor(secretaria2));
 
 		// supervisores jerarquia empleado
 		System.out.println();

@@ -7,13 +7,14 @@ public class Negocio {
 	 *  
 	 * @param porcCambio: porcentaje de cambio de precio 
 	 */
-	public void cambiarPrecio(double porcCambio)
+	public void cambiarPrecio(double porcCambio) {}
 
 	/**
 	 * Retorna el valor total del stock multiplicando la cantidad existente por el precio
 	 * 
 	 * @return stock valorizado
 	 */
-	public double stockValorizado() {}
+	public double stockValorizado() {
+		return 0;}
 
 }
