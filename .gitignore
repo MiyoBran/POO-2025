@@ -84,4 +84,7 @@ hs_err_pid*
 # virtual machine crash logs
 hs_err_pid*
 replay_pid*
+
+# Ignorar archivos y carpetas generados
+
 /bin/
