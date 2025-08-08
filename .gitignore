@@ -1,4 +1,3 @@
-@@ -1,86 +1,2 @@
 # Maven
 target/
 pom.xml.tag
@@ -85,5 +84,6 @@ hs_err_pid*
 # virtual machine crash logs
 hs_err_pid*
 replay_pid*
+
 # Ignorar archivos y carpetas generados
 /bin/
