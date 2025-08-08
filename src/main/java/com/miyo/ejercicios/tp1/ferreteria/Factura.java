@@ -19,17 +19,17 @@ public class Factura {
 
     // Clase interna ItemFactura
     public static class ItemFactura {
-        private String articuloVendido;
+        private Articulo articuloVendido;
         private int cantidad;
         private double precio;
 
-        public ItemFactura(String articuloVendido, int cantidad, double precio) {
+        public ItemFactura(Articulo articuloVendido, int cantidad, double precio) {
             this.articuloVendido = articuloVendido;
             this.cantidad = cantidad;
             this.precio = precio;
         }
 
-        public String getArticuloVendido() {
+        public Articulo getArticuloVendido() {
             return articuloVendido;
         }
 
