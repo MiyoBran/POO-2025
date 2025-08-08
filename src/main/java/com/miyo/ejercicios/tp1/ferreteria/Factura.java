@@ -1,10 +1,12 @@
 package com.miyo.ejercicios.tp1.ferreteria;
 
+import java.time.LocalDate;
+
 public class Factura {
     private int numero;
-    private String fechaVenta;
+    private LocalDate fechaVenta;
 
-    public Factura(int numero, String fechaVenta) {
+    public Factura(int numero, LocalDate fechaVenta) {
         this.numero = numero;
         this.fechaVenta = fechaVenta;
     }
