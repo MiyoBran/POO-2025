@@ -14,6 +14,6 @@ public class Negocio {
 	 * 
 	 * @return stock valorizado
 	 */
-	public double stockValorizado()
+	public double stockValorizado() {}
 
 }
