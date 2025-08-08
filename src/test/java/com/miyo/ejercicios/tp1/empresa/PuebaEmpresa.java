@@ -1,8 +1,8 @@
 package com.miyo.ejercicios.tp1.empresa;
 
-import empresa.Departamento;
-import empresa.Empleado;
-import empresa.Empresa;
+import com.miyo.ejercicios.tp1.empresa.Departamento;
+import com.miyo.ejercicios.tp1.empresa.Empleado;
+import com.miyo.ejercicios.tp1.empresa.Empresa;
 
 public class PuebaEmpresa {
 

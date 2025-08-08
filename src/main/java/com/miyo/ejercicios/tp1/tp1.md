@@ -82,3 +82,78 @@ public void cambiarPrecio(double porcCambio)
  * @return stock valorizado
  */
 public double stockValorizado()
+```
+## 🧩 Ejercicio 3 – Clientes y cuenta corriente
+
+Extender el ejercicio anterior para manejar **cuentas corrientes** de clientes.
+
+### 📦 Clase `Cliente`
+- código  
+- nombre  
+- cuit  
+- teléfono  
+- dirección
+
+Modificar la clase `Factura` para registrar el cliente si la venta es **en cuenta corriente**.  
+Para ventas al **contado**, el registro del cliente es **opcional**.
+
+### 🧪 Métodos nuevos en la clase `Negocio`
+
+Responder a las siguientes consultas:
+
+- Total facturado entre dos fechas
+- Total facturado entre dos fechas **para un cliente**
+- Total facturado entre dos fechas **en cuenta corriente**
+- Total facturado entre dos fechas **para un cliente en cuenta corriente**
+
+---
+
+## 🧩 Ejercicio 4 – Gestión académica: profesores, materias y alumnos
+
+La facultad necesita un sistema para gestionar profesores, materias y alumnos.
+
+Crear las siguientes clases:
+
+- `Materia`  
+  - código  
+  - nombre  
+
+- `Profesor`  
+  - legajo  
+  - nombre  
+  - apellido  
+  - materias que dicta (**puede dictar más de una**)  
+
+- `Alumno`  
+  - legajo  
+  - nombre  
+  - apellido  
+  - materias que cursa (**puede cursar ninguna, una o varias**)  
+
+- `Facultad` que gestiona profesores, alumnos y materias.
+
+---
+
+## 🧩 Ejercicio 5 – Correlativas y datos personales
+
+Extender el ejercicio anterior.
+
+### 📚 En la clase `Materia`
+- Registrar las **materias correlativas**.
+
+### 👤 Clase `DatosPersonal`
+- calle  
+- ciudad  
+- teléfono  
+- mail  
+
+Utilizar esta clase para registrar los datos personales de **alumnos** y **profesores**.
+
+### 🧪 Métodos en la clase `Facultad`
+
+Responder a las siguientes consultas:
+
+- Todas las materias que dicta un profesor
+- Todos los alumnos que cursan una determinada materia
+- La cantidad de alumnos por materia
+---
