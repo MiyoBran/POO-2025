@@ -3,7 +3,7 @@ package com.miyo.ejercicios.tp1.empresa;
 import com.miyo.ejercicios.tp1.empresa.Departamento;
 import com.miyo.ejercicios.tp1.empresa.Empleado;
 import com.miyo.ejercicios.tp1.empresa.Empresa;
-public class PuebaEmpresa {
+public class PruebaEmpresa {
 
 	public static void main(String[] args) {
 
