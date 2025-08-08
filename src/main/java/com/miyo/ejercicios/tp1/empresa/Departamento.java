@@ -1,5 +1,8 @@
 package com.miyo.ejercicios.tp1.empresa;
 
+/**
+ * Represents a department within a company, identified by a code and a name.
+ */
 public class Departamento {
 	
 	private int codigo;
