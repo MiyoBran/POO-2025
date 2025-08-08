@@ -1,5 +1,9 @@
 package com.miyo.ejercicios.tp1.empresa;
 
+/**
+ * Representa un empleado dentro de la empresa, incluyendo su legajo, nombre,
+ * supervisor y departamento.
+ */
 public class Empleado {
 	
 	private int legajo;

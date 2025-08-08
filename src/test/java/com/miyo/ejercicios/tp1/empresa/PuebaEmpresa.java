@@ -4,7 +4,7 @@ import com.miyo.ejercicios.tp1.empresa.Departamento;
 import com.miyo.ejercicios.tp1.empresa.Empleado;
 import com.miyo.ejercicios.tp1.empresa.Empresa;
 
-public class PuebaEmpresa {
+public class PruebaEmpresa {
 
 	public static void main(String[] args) {
 
@@ -17,7 +17,7 @@ public class PuebaEmpresa {
 		Departamento produccion = arcor.agregarDepartamento(3, "Produccion");
 
 		Empleado gerente = arcor.agregarEmpleado(1, "Juan Perez", null, gerencia);
-		Empleado secretaria = arcor.agregarEmpleado(2, "Silvia Perez", gerente, gerencia);
+		Empleado secretaria 2= arcor.agregarEmpleado(2, "Silvia Perez", gerente, gerencia);
 		Empleado supervisorVentas = arcor.agregarEmpleado(3, "Ignacio Ramirez", gerente, ventas);
 		Empleado operarioVentas = arcor.agregarEmpleado(4, "Ruben Aguirre", supervisorVentas, ventas);
 		Empleado supervisorProd = arcor.agregarEmpleado(5, "Carlos Villagran", gerente, produccion);
