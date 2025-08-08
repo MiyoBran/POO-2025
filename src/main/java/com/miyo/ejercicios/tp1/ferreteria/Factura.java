@@ -15,7 +15,7 @@ public class Factura {
         return numero;
     }
 
-    public String getFechaVenta() {
+    public LocalDate getFechaVenta() {
         return fechaVenta;
     }
 
