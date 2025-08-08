@@ -1,4 +1,4 @@
-package com.miyo.ejercicios.tp1.empresa;
+package empresa;
 
 /*
 Crear la clase `Empresa` que gestiona empleados y departamentos. Incluir métodos para responder a las siguientes consultas:

@@ -1,4 +1,4 @@
-package com.miyo.ejercicios.tp1.empresa;
+package empresa;
 
 /**
  * Represents a department within a company, identified by a code and a name.

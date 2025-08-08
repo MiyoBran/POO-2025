@@ -1,4 +1,4 @@
-package com.miyo.ejercicios.tp1.empresa;
+package empresa;
 
 import java.util.ArrayList;
 import java.util.List;

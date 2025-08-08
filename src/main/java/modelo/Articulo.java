@@ -1,5 +1,6 @@
-package com.miyo.ejercicios.tp1.ferreteria;
+package modelo;
 
+import java.util.Objects;
 
 /**
  * Clase que representa un artículo en el negocio.
@@ -44,8 +45,34 @@ public class Articulo {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
-	
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(codigo);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Articulo other = (Articulo) obj;
+		return codigo == other.codigo;
+	}
 	
+	/**
+     * Descuenta la cantidad indicada del stock del artículo.
+     * Lanza StockInsuficienteException si no hay suficiente stock.
+     * @param cantidad cantidad a descontar
+     */
+    public void descontarStock(int cantidad) {
+        if (cantidad > this.cantidad) {
+            throw new StockInsuficienteException("No hay stock suficiente, quedan " + this.cantidad + " " + descripcion);
+        }
+        this.cantidad -= cantidad;
+    }
 
 }

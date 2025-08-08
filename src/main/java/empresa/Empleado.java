@@ -1,4 +1,4 @@
-package com.miyo.ejercicios.tp1.empresa;
+package empresa;
 
 /**
  * Representa un empleado dentro de la empresa, incluyendo su legajo, nombre,

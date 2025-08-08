@@ -1,4 +1,8 @@
-package com.miyo.ejercicios.tp1.empresa;
+package empresa;
+
+import empresa.Departamento;
+import empresa.Empleado;
+import empresa.Empresa;
 
 public class PruebaEmpresa {
 
