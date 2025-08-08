@@ -3,8 +3,11 @@ package com.miyo.ejercicios.tp1.empresa;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Representa una empresa que gestiona empleados y departamentos.
+ * Permite agregar empleados y departamentos, y consultar relaciones entre ellos.
+ */
 public class Empresa {
-
 	private String nombre;
 	private String direccion;
 	private List<Empleado> empleados;
