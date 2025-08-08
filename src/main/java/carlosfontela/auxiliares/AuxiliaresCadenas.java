@@ -1,0 +1,11 @@
+package carlosfontela.auxiliares;
+
+public class AuxiliaresCadenas {
+
+	public static boolean palindromo (String s) {
+		boolean capicua = true;
+		for (int ini = 0, fin = s.length() - 1; ini < fin && capicua; ini++, fin--)
+			capicua = ( s.charAt(ini) == s.charAt(fin) );
+		return (capicua);
+	}
+}
