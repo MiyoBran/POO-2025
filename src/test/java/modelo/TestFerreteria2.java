@@ -8,11 +8,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import exceptions.ArticuloRepetidoException;
+import exceptions.StockInsuficienteException;
 import modelo.Articulo;
-import modelo.ArticuloRepetidoException;
 import modelo.Factura;
 import modelo.Negocio;
-import modelo.StockInsuficienteException;
 
 public class TestFerreteria2 {
 

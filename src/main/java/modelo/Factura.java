@@ -1,45 +1,29 @@
 package modelo;
 
+import exceptions.ArticuloRepetidoException;
+import exceptions.StockInsuficienteException;
+import jdk.jshell.spi.SPIResolutionException;
+
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Factura {
-    private int numero;
-    private LocalDate fechaVenta;
-    private List<ItemFactura> items;
-    
-    
-    // Constructor de la clase Factura, solo se puede crear una factura con un artículo y una cantidad
-    // Si se desea agregar más artículos, se debe usar el método agregarItem
-    public Factura(int numero, LocalDate fechaVenta, Articulo item, int cantidad) {
-        this.numero = numero;
-        this.fechaVenta = fechaVenta;
-        this.items = new java.util.LinkedList<>();
-        agregarItem(item, cantidad);
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public LocalDate getFechaVenta() {
-        return fechaVenta;
-    }
-
-    // Clase interna ItemFactura
+    //Inner-Class
     private class ItemFactura {
-        private Articulo articuloVendido;
+        private Articulo articulo;
         private int cantidad;
         private double precio;
 
-        public ItemFactura(Articulo articuloVendido, int cantidad, double precio) {
-            this.articuloVendido = articuloVendido;
+        public ItemFactura(Articulo articulo, int cantidad) {
+            this.articulo = articulo;
             this.cantidad = cantidad;
-            this.precio = precio;
+            this.precio = articulo.getPrecio();
         }
 
-        public Articulo getArticuloVendido() {
-            return articuloVendido;
+        public Articulo getArticulo() {
+            return articulo;
         }
 
         public int getCantidad() {
@@ -51,41 +35,60 @@ public class Factura {
         }
     }
 
-    /**
-     * Agrega un artículo a la factura con la cantidad indicada.
-     * si el articulo ya existe, se lanza una excepción ArticuloRepetidoException.
-     * @param articulo Artículo a agregar
-     * @param cantidad Cantidad vendida
-     * @throws IllegalArgumentException si el artículo es null o la cantidad no es válida
-     * @throws ArticuloRepetidoException si el artículo ya está en la factura
-     */
-    public void agregarItem(Articulo articulo, int cantidad) {
-        if (articulo == null) {
-            throw new IllegalArgumentException("El artículo no puede ser null");
-        }
-        if (cantidad <= 0) {
-            throw new IllegalArgumentException("La cantidad debe ser mayor a cero");
-        }
-        // Verificar si el artículo ya existe en la factura
-        for (ItemFactura item : items) {
-            if (item.getArticuloVendido().equals(articulo)) {
-                throw new ArticuloRepetidoException("El artículo ya está en la factura");
-            }
-        }
-        
-        // Verificar si hay suficiente stock
-        // Verificar y descontar stock antes de agregar el ítem
-        articulo.descontarStock(cantidad);
-        ItemFactura itemFactura = new ItemFactura(articulo, cantidad, articulo.getPrecio());
-        items.add(itemFactura);
+    //Atributos
+    private int numeroFactura;
+    private LocalDate fecha;
+    private List<ItemFactura> itemFacturas;
+
+    public Factura(int numeroFactura, LocalDate fecha, Articulo articulo, int cantidad) {
+        this.numeroFactura = numeroFactura;
+        this.fecha = fecha;
+        this.itemFacturas = new ArrayList<>();
+        itemFacturas.add(new ItemFactura(articulo, cantidad));
     }
 
-	public Double importeTotal() {
-		// TODO Auto-generated method stub
-		double total = 0.0;
-		for (ItemFactura item : items) {
-			total += item.getPrecio() * item.getCantidad();
-		}
-		return total;
-	}
+    public void agregarItem(Articulo articulo, int cantidad) throws ArticuloRepetidoException, StockInsuficienteException {
+        if (articulo.getCantidad() < cantidad) {
+            throw new StockInsuficienteException();
+        }
+        for (ItemFactura item : itemFacturas) {
+            if (item.getArticulo().equals(articulo)) {
+                throw new ArticuloRepetidoException();
+            }
+        }
+        itemFacturas.add(new ItemFactura(articulo, cantidad));
+        articulo.setCantidad(articulo.getCantidad() - cantidad);
+    }
+
+    public int getNumeroFactura() {
+        return numeroFactura;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public List<ItemFactura> getItemFacturas() {
+        return itemFacturas;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Factura factura)) return false;
+        return numeroFactura == factura.numeroFactura;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(numeroFactura);
+    }
+
+    public double importeTotal() {
+        double total = 0;
+        for (ItemFactura item : itemFacturas) {
+            total += item.getPrecio() * item.getCantidad();
+        }
+        return total;
+    }
 }

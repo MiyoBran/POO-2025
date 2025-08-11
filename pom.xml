@@ -36,7 +36,20 @@
             <scope>test</scope>
         </dependency>
         <!-- JUnit 4 para compatibilidad con tests antiguos -->
-      
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- JUnit Vintage Engine para ejecutar tests JUnit 4 con JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Hamcrest para aserciones en tests -->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
