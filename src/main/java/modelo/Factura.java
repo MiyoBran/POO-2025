@@ -1,8 +1,8 @@
 package modelo;
 
 import exceptions.ArticuloRepetidoException;
+import exceptions.ClienteNuloException;
 import exceptions.StockInsuficienteException;
-import jdk.jshell.spi.SPIResolutionException;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -22,16 +22,26 @@ public class Factura {
             this.precio = articulo.getPrecio();
         }
 
-        public Articulo getArticulo() {
-            return articulo;
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof ItemFactura that)) return false;
+            return Objects.equals(articulo, that.articulo);
         }
 
-        public int getCantidad() {
-            return cantidad;
+        @Override
+        public int hashCode() {
+            return Objects.hashCode(articulo);
         }
 
-        public double getPrecio() {
-            return precio;
+        @Override
+        public String toString() {
+            return "ItemFactura{" +
+                    "articulo=" + articulo +
+                    ", cantidad=" + cantidad +
+                    ", precio=" + precio +
+                    '}';
         }
     }
 
@@ -39,12 +49,23 @@ public class Factura {
     private int numeroFactura;
     private LocalDate fecha;
     private List<ItemFactura> itemFacturas;
+    private Cliente cliente;
+    private boolean ctaCte;
 
-    public Factura(int numeroFactura, LocalDate fecha, Articulo articulo, int cantidad) {
+    public Factura(int numeroFactura, LocalDate fecha, Cliente cliente, Articulo articulo, int cantidad, boolean ctaCte) throws ClienteNuloException {
         this.numeroFactura = numeroFactura;
         this.fecha = fecha;
         this.itemFacturas = new ArrayList<>();
-        itemFacturas.add(new ItemFactura(articulo, cantidad));
+        this.agregarItem(articulo, cantidad);
+        if (ctaCte && cliente == null) {
+            throw new ClienteNuloException();
+        }
+        this.cliente = cliente;
+        this.ctaCte = ctaCte;
+    }
+
+    public Factura(int numeroFactura, LocalDate fecha, Articulo articulo, int cantidad) {
+        this(numeroFactura, fecha, null, articulo, cantidad, false);
     }
 
     public void agregarItem(Articulo articulo, int cantidad) throws ArticuloRepetidoException, StockInsuficienteException {
@@ -52,7 +73,7 @@ public class Factura {
             throw new StockInsuficienteException();
         }
         for (ItemFactura item : itemFacturas) {
-            if (item.getArticulo().equals(articulo)) {
+            if (item.articulo.equals(articulo)) {
                 throw new ArticuloRepetidoException();
             }
         }
@@ -60,16 +81,16 @@ public class Factura {
         articulo.setCantidad(articulo.getCantidad() - cantidad);
     }
 
-    public int getNumeroFactura() {
-        return numeroFactura;
-    }
-
     public LocalDate getFecha() {
         return fecha;
     }
 
-    public List<ItemFactura> getItemFacturas() {
-        return itemFacturas;
+    public boolean isCtaCte() {
+        return ctaCte;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
     }
 
     @Override
@@ -84,10 +105,21 @@ public class Factura {
         return Objects.hashCode(numeroFactura);
     }
 
+    @Override
+    public String toString() {
+        return "Factura{" +
+                "numeroFactura=" + numeroFactura +
+                ", fecha=" + fecha +
+                ", itemFacturas=" + itemFacturas +
+                ", cliente=" + cliente +
+                ", ctaCte=" + ctaCte +
+                '}';
+    }
+
     public double importeTotal() {
         double total = 0;
         for (ItemFactura item : itemFacturas) {
-            total += item.getPrecio() * item.getCantidad();
+            total += item.precio * item.cantidad;
         }
         return total;
     }
