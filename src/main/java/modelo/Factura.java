@@ -1,7 +1,6 @@
 package modelo;
 
 import exceptions.ArticuloRepetidoException;
-import exceptions.ClienteNuloException;
 import exceptions.StockInsuficienteException;
 
 import java.time.LocalDate;
