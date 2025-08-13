@@ -1,8 +1,5 @@
 package modelo;
 
-import exceptions.ArticuloRepetidoException;
-import exceptions.StockInsuficienteException;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;

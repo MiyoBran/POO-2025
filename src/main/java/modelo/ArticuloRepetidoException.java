@@ -1,4 +1,4 @@
-package exceptions;
+package modelo;
 
 public class ArticuloRepetidoException extends RuntimeException {
     public ArticuloRepetidoException() {

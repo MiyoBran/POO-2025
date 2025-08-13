@@ -8,11 +8,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import modelo.Articulo;
-import modelo.Cliente;
-import modelo.ClienteNuloException;
-import modelo.Factura;
-import modelo.Negocio;
+
 
 public class TestFerreteria3 {
 

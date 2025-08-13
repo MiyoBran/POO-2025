@@ -68,10 +68,19 @@ public class Negocio {
         return valorStock;
     }
 
+    private boolean facturaEnRango(Factura factura, LocalDate f1, LocalDate f2, Cliente cliente, Boolean ctaCte) {
+        boolean enRango = (factura.getFecha().isAfter(f1) || factura.getFecha().isEqual(f1)) &&
+                          (factura.getFecha().isBefore(f2) || factura.getFecha().isEqual(f2));
+        if (!enRango) return false;
+        if (cliente != null && (factura.getCliente() == null || !factura.getCliente().equals(cliente))) return false;
+        if (ctaCte != null && factura.isCtaCte() != ctaCte) return false;
+        return true;
+    }
+
     public double totalFacturado(LocalDate f1, LocalDate f2) {
         double total = 0;
         for (Factura factura : facturas) {
-            if ((factura.getFecha().isAfter(f1) || factura.getFecha().isEqual(f1)) && (factura.getFecha().isBefore(f2)) || (factura.getFecha().isEqual(f2))) {
+            if (facturaEnRango(factura, f1, f2, null, null)) {
                 total += factura.importeTotal();
             }
         }
@@ -81,7 +90,7 @@ public class Negocio {
     public double totalFacturadoCtaCte(LocalDate f1, LocalDate f2) {
         double total = 0;
         for (Factura factura : facturas) {
-            if (factura.isCtaCte() && (factura.getFecha().isAfter(f1) || factura.getFecha().isEqual(f1)) && (factura.getFecha().isBefore(f2)) || (factura.getFecha().isEqual(f2))) {
+            if (facturaEnRango(factura, f1, f2, null, true)) {
                 total += factura.importeTotal();
             }
         }
@@ -91,7 +100,7 @@ public class Negocio {
     public double totalFacturadoCliente(LocalDate f1, LocalDate f2, Cliente cliente) {
         double total = 0;
         for (Factura factura : facturas) {
-            if (factura.getCliente() != null && factura.getCliente().equals(cliente) && (factura.getFecha().isAfter(f1) || factura.getFecha().isEqual(f1)) && (factura.getFecha().isBefore(f2)) || (factura.getFecha().isEqual(f2))) {
+            if (facturaEnRango(factura, f1, f2, cliente, null)) {
                 total += factura.importeTotal();
             }
         }
@@ -101,7 +110,7 @@ public class Negocio {
     public double totalFacturadoClienteCtaCte(LocalDate f1, LocalDate f2, Cliente cliente) {
         double total = 0;
         for (Factura factura : facturas) {
-            if (factura.isCtaCte() && factura.getCliente().equals(cliente) && factura.getFecha().isAfter(f1) && factura.getFecha().isBefore(f2)) {
+            if (facturaEnRango(factura, f1, f2, cliente, true)) {
                 total += factura.importeTotal();
             }
         }

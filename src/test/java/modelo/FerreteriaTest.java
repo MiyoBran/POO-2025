@@ -7,9 +7,6 @@ import java.time.LocalDate;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import exceptions.ArticuloRepetidoException;
-import exceptions.StockInsuficienteException;
-
 class FerreteriaTest {
 
 	private Negocio ferreteria;

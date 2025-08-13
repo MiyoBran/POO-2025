@@ -1,4 +1,4 @@
-package exceptions;
+package modelo;
 
 
 public class StockInsuficienteException extends RuntimeException {
