@@ -61,5 +61,4 @@ class FerreteriaTest {
 		assertThrows(StockInsuficienteException.class, () -> {
 			factura4.agregarItem(pin, 5);
 		});
-	}
-}
+	}}
