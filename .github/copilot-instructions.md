@@ -147,6 +147,15 @@ mvn package
 3. **🏗️ INSTRUCCIONES DEL PROYECTO**
    - `.github/copilot-instructions.md` - Contexto y estructura del proyecto POO-2025
 
+### Notas de uso (cuándo usar cada guía)
+
+Estas notas son un recordatorio rápido para agentes y desarrolladores:
+
+- `prompts/java.instructions.md` — Usar para cambios de diseño y estilo en Java: refactorings, prevención de code smells y decisiones de arquitectura.
+- `prompts/java-docs.prompt.md` — Usar al generar o revisar JavaDoc (resúmenes, `@param`, `@return`, `@throws`, ejemplos en bloque).
+- `prompts/java-junit.prompt.md` — Usar cuando se creen o revisen tests unitarios (JUnit 5): casos parametrizados, mocks y organización de suites.
+- `prompts/markdown.instructions.md` — Usar al escribir o validar contenido Markdown: front-matter, encabezados, listas y formato general.
+
 ### Al trabajar en este proyecto:
 
 1. **Consultar SIEMPRE** las instrucciones de cátedra primero
