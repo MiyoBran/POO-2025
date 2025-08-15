@@ -44,6 +44,12 @@ Estas notas ayudan a los agentes a seleccionar la guía más apropiada para la t
 - `prompts/java-junit.prompt.md` — Usar cuando se creen o revisen pruebas unitarias (JUnit 5), incluidas pruebas parametrizadas, organización de tests y mejores prácticas de aserciones/mocking.
 - `prompts/markdown.instructions.md` — Usar al crear o validar contenidos Markdown (README, guías, posts). Esta guía define front-matter, niveles de encabezado y reglas de formato que deben cumplirse antes de publicar.
 
+- `prompts/copilot-instructions-blueprint-generator.prompt.md` — Plantilla para generar `copilot-instructions.md` adaptadas a Java/POO.
+- `prompts/prompt-builder.prompt.md` — Generador interactivo de prompts y plantillas (adaptado a Java/POO).
+- `prompts/prompt-engineer.chatmode.md` — Chatmode para analizar y mejorar prompts.
+- `prompts/task-planner.chatmode.md` — Chatmode para planificación basada en investigación.
+- `prompts/blueprint-mode.chatmode.md` — Chatmode para especificación y arquitectura.
+
 ## Nota sobre copias en `src/main/resources`
 
 Algunos archivos de guía y prompts existen también en `src/main/resources/` como copias históricas o para empaquetado. Esas copias NO son canónicas. Agentes automáticos y revisores humanos deben preferir siempre las versiones bajo `.github/prompts/` o los archivos listados en la sección "Archivo de referencia" arriba.
