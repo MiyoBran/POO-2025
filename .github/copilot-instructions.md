@@ -151,10 +151,21 @@ mvn package
 
 Estas notas son un recordatorio rápido para agentes y desarrolladores:
 
-- `prompts/java.instructions.md` — Usar para cambios de diseño y estilo en Java: refactorings, prevención de code smells y decisiones de arquitectura.
-- `prompts/java-docs.prompt.md` — Usar al generar o revisar JavaDoc (resúmenes, `@param`, `@return`, `@throws`, ejemplos en bloque).
-- `prompts/java-junit.prompt.md` — Usar cuando se creen o revisen tests unitarios (JUnit 5): casos parametrizados, mocks y organización de suites.
-- `prompts/markdown.instructions.md` — Usar al escribir o validar contenido Markdown: front-matter, encabezados, listas y formato general.
+
+## Prompts y chatmodes útiles
+
+Estos prompts y chatmodes están disponibles en `.github/prompts/` y pueden ayudar en tareas específicas. Úsalos según la necesidad y siempre revisa las sugerencias antes de aplicar cambios automáticos.
+
+- `prompts/prompt-builder.prompt.md` — Generador interactivo de prompts, útil para crear nuevos `.prompt.md` adaptados a Java/POO.
+- `prompts/copilot-instructions-blueprint-generator.prompt.md` — Plantilla para generar `copilot-instructions.md` basadas en un análisis del codebase.
+- `prompts/generate-custom-instructions-from-codebase.prompt.md` — Genera instrucciones de Copilot a partir de patrones detectados en el código.
+- `prompts/prompt-engineer.chatmode.md` — Chatmode para analizar y mejorar prompts existentes.
+- `prompts/refine-issue.chatmode.md` — Chatmode que enriquece issues con criterios de aceptación y consideraciones técnicas.
+- `prompts/task-planner.chatmode.md` — Chatmode para crear planes de implementación basados en investigación (revisar y validar manualmente).
+- `prompts/blueprint-mode.chatmode.md` — Chatmode de especificación y diseño (Blueprint Mode), usar para trabajo de arquitectura y especificaciones detalladas.
+- `prompts/suggest-awesome-github-copilot-chatmodes.prompt.md` — Sugiere chatmodes externos (revisión humana recomendada antes de incorporación).
+
+Consulta `ai-manifest.md` para el índice canónico de prioridades y para saber qué archivos de `.github/` tomar primero.
 
 ### Al trabajar en este proyecto:
 

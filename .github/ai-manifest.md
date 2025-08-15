@@ -18,15 +18,33 @@ Archivo de referencia (orden de prioridad):
 
 Directrices para agentes AI:
 
-- Leer `buenas-practicas-POO.instructions.md` primero y respetar su contenido; no escribir ni sobrescribirlo.
-- Usar `ai-manifest.md` como índice y `copilot-instructions.md` para contexto adicional.
-- Para cambios automáticos en código, crear PRs usando la plantilla `PULL_REQUEST_TEMPLATE.md`.
-- Si se generan issues, usar los campos de `ISSUE_TEMPLATE/`.
 
 No modificar:
 
-- `buenas-practicas-POO.instructions.md` (archivo de la cátedra).
 
+
+Prompts y chatmodes adicionales (ubicados en `.github/prompts/`):
+
+- `prompts/prompt-builder.prompt.md`
+	Generador interactivo de prompts adaptado a Java/POO; usar para crear nuevos `.prompt.md` siguiendo la plantilla del repositorio.
+- `prompts/copilot-instructions-blueprint-generator.prompt.md`
+	Plantilla para crear `copilot-instructions.md` basadas en un análisis del codebase (migraciones/blueprints).
+- `prompts/generate-custom-instructions-from-codebase.prompt.md`
+	Prompt para generar instrucciones de Copilot basadas estrictamente en patrones detectados en el código.
+- `prompts/prompt-engineer.chatmode.md`
+	Chatmode especializado en analizar y mejorar prompts (útil al refinar requisitos de prompts grandes).
+- `prompts/refine-issue.chatmode.md`
+	Chatmode para enriquecer issues con criterios de aceptación, consideraciones técnicas y casos borde.
+- `prompts/task-planner.chatmode.md`
+	Chatmode para crear planes de implementación basados en investigación (usar con supervisión humana).
+- `prompts/blueprint-mode.chatmode.md`
+	Chatmode para trabajo de especificación y diseño exhaustivo (Blueprint Mode).
+- `prompts/suggest-awesome-github-copilot-chatmodes.prompt.md`
+	Prompt que sugiere chatmodes externos útiles (requiere revisión humana antes de aplicar).
+- `prompts/guia-prompts.md` y `prompts/README.md`
+	Guías y documentación de soporte para crear/usar prompts en este repositorio.
+
+Nota: Si se agregan, mueven o renombran prompts en `.github/prompts/`, actualiza este `ai-manifest.md` para mantener el índice canónico.
 Para humanos:
 
 - Si añades o mueves archivos de instrucción, actualiza `ai-manifest.md`.
