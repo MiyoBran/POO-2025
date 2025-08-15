@@ -9,7 +9,7 @@ Este directorio contiene archivos de configuración específicos de GitHub para 
 
 ### Instrucciones del Proyecto
 - **`copilot-instructions.md`** - Instrucciones principales del proyecto POO-2025
-- **`README.md`** - Este archivo (información del directorio .github)
+- **`README.md`** - Este archivo (información del directorio '.github')
 
 ### Buenas Prácticas de Desarrollo
 - **`java.instructions.md`** - Buenas prácticas para código Java
@@ -17,7 +17,7 @@ Este directorio contiene archivos de configuración específicos de GitHub para 
 - **`java-junit.prompt.md`** - Convenciones para tests con JUnit
 - **`markdown.instructions.md`** - Estándares para archivos Markdown
 
-Prompts y chatmodes: consulta la carpeta `prompts/` para plantillas, chatmodes y guías (ver `prompts/README.md`).
+Prompts y chat-modes: consulta la carpeta `prompts/` para plantillas, chat-modes y guías (ver `prompts/README.md`).
 
 ## 🎯 Propósito
 
@@ -41,7 +41,7 @@ Estos archivos son automáticamente detectados por GitHub Copilot cuando trabaja
 
 ## Punto de entrada para agentes AI
 
-Para agentes o bots automáticos (Copilot, LLMs, CI bots), usar `ai-manifest.md` como índice principal. Ese archivo centraliza prioridades y explica qué archivos de `.github/` son fuente de verdad. Siempre consultar `buenas-practicas-POO.instructions.md` primero.
+Para agentes o bots automáticos (Copilot, LLM, CI bots), usar `ai-manifest.md` como índice principal. Ese archivo centraliza prioridades y explica qué archivos de `.github/` son fuente de verdad. Siempre consultar `buenas-practicas-POO.instructions.md` primero.
 
 ---
 
