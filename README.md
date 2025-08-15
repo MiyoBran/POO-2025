@@ -4,7 +4,7 @@ Proyecto de ejercicios de **Programación Orientada a Objetos** en Java para el 
 
 ## 🛠️ Tecnologías
 
-- **Java 17+**
+- **Java 21+**
 - **Maven** como herramienta de construcción
 - **JUnit 5** para testing
 - Compatible con **VS Code**, **Eclipse** e **IntelliJ IDEA**
@@ -138,7 +138,7 @@ Este proyecto está configurado para funcionar en:
 
 ## 📋 Requisitos
 
-- **Java 17** o superior
+- **Java 21** o superior
 - **Maven 3.6+**
 - Tu IDE favorito
 
@@ -156,3 +156,9 @@ Este proyecto está configurado para funcionar en:
 ---
 
 *Proyecto académico - 2025* 🎓
+
+## Nota sobre guías y prompts
+
+Las guías y prompts canónicos para agentes y revisores se encuentran en `.github/prompts/`.
+
+Algunas copias históricas pueden existir en `src/main/resources/`; esas copias no deben considerarse la fuente de verdad — usar siempre `.github/prompts/`.
