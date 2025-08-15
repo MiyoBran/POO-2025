@@ -139,10 +139,10 @@ mvn package
    - **PREVALECE** sobre cualquier otra instrucción en caso de conflicto
 
 2. **📝 BUENAS PRÁCTICAS DE DESARROLLO**
-   - `.github/java.instructions.md` - Estándares para código Java
-   - `.github/java-docs.prompt.md` - Convenciones para JavaDoc  
-   - `.github/java-junit.prompt.md` - Estándares para tests JUnit
-   - `.github/markdown.instructions.md` - Formato para archivos Markdown
+        - `.github/prompts/java.instructions.md` - Estándares para código Java
+        - `.github/prompts/java-docs.prompt.md` - Convenciones para JavaDoc  
+        - `.github/prompts/java-junit.prompt.md` - Estándares para tests JUnit
+        - `.github/prompts/markdown.instructions.md` - Formato para archivos Markdown
 
 3. **🏗️ INSTRUCCIONES DEL PROYECTO**
    - `.github/copilot-instructions.md` - Contexto y estructura del proyecto POO-2025

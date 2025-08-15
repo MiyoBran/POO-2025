@@ -14,7 +14,7 @@ Archivo de referencia (orden de prioridad):
 1. `buenas-practicas-POO.instructions.md` — INSTRUCCIONES DE CÁTEDRA (NO MODIFICAR)
 2. `ai-manifest.md` — ESTE ARCHIVO (entrada principal para agentes)
 3. `copilot-instructions.md` — Contexto del proyecto y convenciones
-4. `java.instructions.md`, `java-docs.prompt.md`, `java-junit.prompt.md`, `markdown.instructions.md` — guías de estilo y pruebas
+4. `prompts/java.instructions.md`, `prompts/java-docs.prompt.md`, `prompts/java-junit.prompt.md`, `prompts/markdown.instructions.md` — guías de estilo y pruebas
 
 Directrices para agentes AI:
 
