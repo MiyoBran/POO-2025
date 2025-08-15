@@ -34,3 +34,13 @@ Para humanos:
 ---
 
 Última actualización: 2025-08-15
+
+## Notas de uso (cuándo usar cada guía)
+
+Estas notas ayudan a los agentes a seleccionar la guía más apropiada para la tarea en curso:
+
+- `prompts/java.instructions.md` — Usar cuando se hagan cambios estructurales o de estilo en código Java (refactorings, diseño de clases, recomendaciones de patrones y prevención de code smells). Ideal para PRs que afectan arquitectura o convenios de proyecto.
+- `prompts/java-docs.prompt.md` — Usar al generar o revisar JavaDoc para clases, métodos o paquetes. Indicada para tareas de documentación automática o revisión de calidad de comentarios.
+- `prompts/java-junit.prompt.md` — Usar cuando se creen o revisen pruebas unitarias (JUnit 5), incluidas pruebas parametrizadas, organización de tests y mejores prácticas de aserciones/mocking.
+- `prompts/markdown.instructions.md` — Usar al crear o validar contenidos Markdown (README, guías, posts). Esta guía define front-matter, niveles de encabezado y reglas de formato que deben cumplirse antes de publicar.
+
