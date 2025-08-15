@@ -3,20 +3,15 @@ name: Bug report
 about: Reporta un bug con pasos claros para reproducirlo
 ---
 
----
-name: Bug report
-about: Reporta un bug con pasos claros para reproducirlo
----
-
-# Resumen
+## Resumen
 
 - Breve descripción del bug:
 
 ## Pasos para reproducir
 
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 ## Resultado esperado
 
