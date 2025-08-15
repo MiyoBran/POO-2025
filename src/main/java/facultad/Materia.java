@@ -1,17 +1,18 @@
 package facultad;
 
-import exceptions.MateriaRepetidaException;
 import java.util.Objects;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Materia {
     private int codigo;
     private String nombre;
-    private java.util.List<Materia> correlativas;
+    private List<Materia> correlativas;
 
     public Materia(int codigo, String nombre) {
         this.codigo = codigo;
         this.nombre = nombre;
-    this.correlativas = new java.util.ArrayList<>();
+    this.correlativas = new ArrayList<>();
     }
 
     public int getCodigo() {

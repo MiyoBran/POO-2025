@@ -9,12 +9,6 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-import facultad.Alumno;
-import facultad.Facultad;
-import facultad.Materia;
-import exceptions.MateriaRepetidaException;
-import facultad.Profesor;
-
 //Test ejercicio 15
 
 public class TestFacultadEje5 {

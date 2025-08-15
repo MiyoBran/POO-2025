@@ -1,4 +1,4 @@
-package exceptions;
+package facultad;
 
 public class ProfesorRepetidoException extends RuntimeException {
     public ProfesorRepetidoException() {

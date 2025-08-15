@@ -1,9 +1,5 @@
 package facultad;
 
-import exceptions.AlumnoRepetidoException;
-import exceptions.MateriaRepetidaException;
-import exceptions.ProfesorRepetidoException;
-
 import java.util.ArrayList;
 import java.util.List;
 

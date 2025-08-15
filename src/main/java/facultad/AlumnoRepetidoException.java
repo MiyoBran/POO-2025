@@ -1,4 +1,4 @@
-package exceptions;
+package facultad;
 
 public class AlumnoRepetidoException extends RuntimeException {
 
