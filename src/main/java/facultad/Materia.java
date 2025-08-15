@@ -1,14 +1,17 @@
 package facultad;
 
+import exceptions.MateriaRepetidaException;
 import java.util.Objects;
 
 public class Materia {
     private int codigo;
     private String nombre;
+    private java.util.List<Materia> correlativas;
 
     public Materia(int codigo, String nombre) {
         this.codigo = codigo;
         this.nombre = nombre;
+    this.correlativas = new java.util.ArrayList<>();
     }
 
     public int getCodigo() {
@@ -37,5 +40,13 @@ public class Materia {
                 "codigo=" + codigo +
                 ", nombre=" + nombre +
                 '}';
+    }
+
+    public Materia agregarCorrelativa(Materia materia) throws MateriaRepetidaException {
+        if (this.correlativas.contains(materia)) {
+            throw new MateriaRepetidaException();
+        }
+        this.correlativas.add(materia);
+        return materia;
     }
 }
