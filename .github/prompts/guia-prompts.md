@@ -1,8 +1,15 @@
+mode: 'guide'
+tools: []
+# Guía práctica de prompts y comparativa de asistentes de IA
+---
+mode: 'guide'
+tools: []
+---
+
 # Guía práctica de prompts y comparativa de asistentes de IA
 
 > Para descargar: copia este contenido y guárdalo como archivo .md. Luego puedes convertirlo a PDF o DOCX desde tu editor (VS Code, Obsidian o cualquier conversor de Markdown).
 
----
 
 ## Resumen ejecutivo
 
@@ -15,3 +22,5 @@
 ## Instrucciones básicas del curso, interpretadas y potenciadas
 
 ... (contenido movido) ...
+<!-- DEPRECATED: esta guía fue retirada and will be deleted by the maintainer in the next commit -->
+

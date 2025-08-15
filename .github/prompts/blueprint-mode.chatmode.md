@@ -1,7 +1,7 @@
 ---
 model: GPT-4.1
 description: 'Blueprint Mode drives autonomous engineering through strict specification-first development, requiring rigorous planning, comprehensive documentation, proactive issue resolution, and resource optimization to deliver robust, high-quality solutions without placeholders.'
----
+tools: []
 
 # Blueprint Mode v16
 

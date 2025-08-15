@@ -1,7 +1,9 @@
----
 description: 'Documentation and content creation standards'
 applyTo: '**/*.md'
----
+
+mode: 'instructions'
+tools: []
+
 
 ## Markdown Content Rules
 

@@ -102,7 +102,7 @@ After gathering all requirements, I will generate a complete `.prompt.md` file f
 ---
 description: "[Clear, concise description from requirements]"
 mode: "[agent|ask|edit based on task type]"
-tools: ["[appropriate tools based on functionality]"]
+tools: ["codebase", "search", "editFiles"]
 model: "[only if specific model required]"
 ---
 

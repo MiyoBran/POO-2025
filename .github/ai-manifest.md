@@ -19,9 +19,6 @@ Archivo de referencia (orden de prioridad):
 Directrices para agentes AI:
 
 
-No modificar:
-
-
 
 Prompts y chatmodes adicionales (ubicados en `.github/prompts/`):
 
@@ -41,8 +38,8 @@ Prompts y chatmodes adicionales (ubicados en `.github/prompts/`):
 	Chatmode para trabajo de especificación y diseño exhaustivo (Blueprint Mode).
 - `prompts/suggest-awesome-github-copilot-chatmodes.prompt.md`
 	Prompt que sugiere chatmodes externos útiles (requiere revisión humana antes de aplicar).
-- `prompts/guia-prompts.md` y `prompts/README.md`
-	Guías y documentación de soporte para crear/usar prompts en este repositorio.
+- `prompts/README.md`
+	Documentación de soporte para crear/usar prompts en este repositorio.
 
 Nota: Si se agregan, mueven o renombran prompts en `.github/prompts/`, actualiza este `ai-manifest.md` para mantener el índice canónico.
 Para humanos:
