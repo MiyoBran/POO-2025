@@ -17,6 +17,8 @@ Este directorio contiene archivos de configuración específicos de GitHub para 
 - **`java-junit.prompt.md`** - Convenciones para tests con JUnit
 - **`markdown.instructions.md`** - Estándares para archivos Markdown
 
+Prompts y chatmodes: consulta la carpeta `prompts/` para plantillas, chatmodes y guías (ver `prompts/README.md`).
+
 ## 🎯 Propósito
 
 Estos archivos aseguran que GitHub Copilot mantenga consistencia en:

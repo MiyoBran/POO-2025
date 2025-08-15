@@ -13,3 +13,7 @@ Este archivo documenta las decisiones de limpieza en `.github/`.
 Motivo: reducir duplicidad, facilitar la entrada canónica `ai-manifest.md` y organizar recursos por tema.
 
 Última actualización: 2025-08-15
+
+Nota adicional:
+
+Algunas de las guías listadas arriba también quedaron copiadas en `src/main/resources/` por compatibilidad histórica o empaquetado. Esas copias deben considerarse no canónicas: los agentes y flujos automatizados deben preferir siempre las versiones ubicadas en `.github/prompts/`.

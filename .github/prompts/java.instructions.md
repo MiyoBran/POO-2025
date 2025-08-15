@@ -1,7 +1,9 @@
----
 description: 'Guidelines for building Java base applications'
 applyTo: '**/*.java'
----
+
+mode: 'instructions'
+tools: []
+
 
 # Java Development
 

@@ -18,15 +18,30 @@ Archivo de referencia (orden de prioridad):
 
 Directrices para agentes AI:
 
-- Leer `buenas-practicas-POO.instructions.md` primero y respetar su contenido; no escribir ni sobrescribirlo.
-- Usar `ai-manifest.md` como índice y `copilot-instructions.md` para contexto adicional.
-- Para cambios automáticos en código, crear PRs usando la plantilla `PULL_REQUEST_TEMPLATE.md`.
-- Si se generan issues, usar los campos de `ISSUE_TEMPLATE/`.
 
-No modificar:
 
-- `buenas-practicas-POO.instructions.md` (archivo de la cátedra).
+Prompts y chatmodes adicionales (ubicados en `.github/prompts/`):
 
+- `prompts/prompt-builder.prompt.md`
+	Generador interactivo de prompts adaptado a Java/POO; usar para crear nuevos `.prompt.md` siguiendo la plantilla del repositorio.
+- `prompts/copilot-instructions-blueprint-generator.prompt.md`
+	Plantilla para crear `copilot-instructions.md` basadas en un análisis del codebase (migraciones/blueprints).
+- `prompts/generate-custom-instructions-from-codebase.prompt.md`
+	Prompt para generar instrucciones de Copilot basadas estrictamente en patrones detectados en el código.
+- `prompts/prompt-engineer.chatmode.md`
+	Chatmode especializado en analizar y mejorar prompts (útil al refinar requisitos de prompts grandes).
+- `prompts/refine-issue.chatmode.md`
+	Chatmode para enriquecer issues con criterios de aceptación, consideraciones técnicas y casos borde.
+- `prompts/task-planner.chatmode.md`
+	Chatmode para crear planes de implementación basados en investigación (usar con supervisión humana).
+- `prompts/blueprint-mode.chatmode.md`
+	Chatmode para trabajo de especificación y diseño exhaustivo (Blueprint Mode).
+- `prompts/suggest-awesome-github-copilot-chatmodes.prompt.md`
+	Prompt que sugiere chatmodes externos útiles (requiere revisión humana antes de aplicar).
+- `prompts/README.md`
+	Documentación de soporte para crear/usar prompts en este repositorio.
+
+Nota: Si se agregan, mueven o renombran prompts en `.github/prompts/`, actualiza este `ai-manifest.md` para mantener el índice canónico.
 Para humanos:
 
 - Si añades o mueves archivos de instrucción, actualiza `ai-manifest.md`.
@@ -43,4 +58,22 @@ Estas notas ayudan a los agentes a seleccionar la guía más apropiada para la t
 - `prompts/java-docs.prompt.md` — Usar al generar o revisar JavaDoc para clases, métodos o paquetes. Indicada para tareas de documentación automática o revisión de calidad de comentarios.
 - `prompts/java-junit.prompt.md` — Usar cuando se creen o revisen pruebas unitarias (JUnit 5), incluidas pruebas parametrizadas, organización de tests y mejores prácticas de aserciones/mocking.
 - `prompts/markdown.instructions.md` — Usar al crear o validar contenidos Markdown (README, guías, posts). Esta guía define front-matter, niveles de encabezado y reglas de formato que deben cumplirse antes de publicar.
+
+- `prompts/copilot-instructions-blueprint-generator.prompt.md` — Plantilla para generar `copilot-instructions.md` adaptadas a Java/POO.
+- `prompts/prompt-builder.prompt.md` — Generador interactivo de prompts y plantillas (adaptado a Java/POO).
+- `prompts/prompt-engineer.chatmode.md` — Chatmode para analizar y mejorar prompts.
+- `prompts/task-planner.chatmode.md` — Chatmode para planificación basada en investigación.
+- `prompts/blueprint-mode.chatmode.md` — Chatmode para especificación y arquitectura.
+
+## Nota sobre copias en `src/main/resources`
+
+Algunos archivos de guía y prompts existen también en `src/main/resources/` como copias históricas o para empaquetado. Esas copias NO son canónicas. Agentes automáticos y revisores humanos deben preferir siempre las versiones bajo `.github/prompts/` o los archivos listados en la sección "Archivo de referencia" arriba.
+
+Reglas rápidas:
+
+- Leer y usar archivos en `.github/prompts/` como fuente de verdad.
+
+- Ignorar los archivos homónimos que aparezcan en `src/main/resources/` salvo que un humano indique explícitamente lo contrario.
+
+- Si se desea convertir una copia histórica en la versión canónica, moverla a `.github/prompts/` y actualizar este `ai-manifest.md`.
 

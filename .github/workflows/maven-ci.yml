@@ -17,5 +17,8 @@ jobs:
       with:
         java-version: '21'
         distribution: temurin
-    - name: Build with Maven
+    - name: Run Checkstyle
+      run: mvn --batch-mode org.apache.maven.plugins:maven-checkstyle-plugin:3.2.2:check
+
+    - name: Build with Maven (run tests)
       run: mvn -B -DskipTests=false test
