@@ -3,14 +3,6 @@ package facultad;
 import org.junit.Before;
 import org.junit.Test;
 
-import facultad.Alumno;
-import exceptions.AlumnoRepetidoException;
-import facultad.Facultad;
-import facultad.Materia;
-import exceptions.MateriaRepetidaException;
-import facultad.Profesor;
-import exceptions.ProfesorRepetidoException;
-
 // Test ejercicio 14
 
 public class TestFacultadEje4 {
