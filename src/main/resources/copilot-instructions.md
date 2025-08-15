@@ -29,11 +29,13 @@ POO-2025/
 
 ## 🛠️ Configuración Técnica
 
-- **Java**: 17+
+- **Java**: 21+
 - **Build Tool**: Maven 3.6+
 - **Testing**: JUnit 5
 - **IDE**: Compatible con VS Code, Eclipse, IntelliJ IDEA
 - **Plataformas**: Windows y Linux
+
+> Nota rápida para agentes: Ver `ai-manifest.md` para el índice canónico de archivos de instrucción en `.github/`.
 
 ## 📝 Convenciones de Código
 
@@ -137,13 +139,33 @@ mvn package
    - **PREVALECE** sobre cualquier otra instrucción en caso de conflicto
 
 2. **📝 BUENAS PRÁCTICAS DE DESARROLLO**
-   - `.github/java.instructions.md` - Estándares para código Java
-   - `.github/java-docs.prompt.md` - Convenciones para JavaDoc  
-   - `.github/java-junit.prompt.md` - Estándares para tests JUnit
-   - `.github/markdown.instructions.md` - Formato para archivos Markdown
+        - `.github/prompts/java.instructions.md` - Estándares para código Java
+        - `.github/prompts/java-docs.prompt.md` - Convenciones para JavaDoc  
+        - `.github/prompts/java-junit.prompt.md` - Estándares para tests JUnit
+        - `.github/prompts/markdown.instructions.md` - Formato para archivos Markdown
 
 3. **🏗️ INSTRUCCIONES DEL PROYECTO**
    - `.github/copilot-instructions.md` - Contexto y estructura del proyecto POO-2025
+
+### Notas de uso (cuándo usar cada guía)
+
+Estas notas son un recordatorio rápido para agentes y desarrolladores:
+
+
+## Prompts y chatmodes útiles
+
+Estos prompts y chatmodes están disponibles en `.github/prompts/` y pueden ayudar en tareas específicas. Úsalos según la necesidad y siempre revisa las sugerencias antes de aplicar cambios automáticos.
+
+- `prompts/prompt-builder.prompt.md` — Generador interactivo de prompts, útil para crear nuevos `.prompt.md` adaptados a Java/POO.
+- `prompts/copilot-instructions-blueprint-generator.prompt.md` — Plantilla para generar `copilot-instructions.md` basadas en un análisis del codebase.
+- `prompts/generate-custom-instructions-from-codebase.prompt.md` — Genera instrucciones de Copilot a partir de patrones detectados en el código.
+- `prompts/prompt-engineer.chatmode.md` — Chatmode para analizar y mejorar prompts existentes.
+- `prompts/refine-issue.chatmode.md` — Chatmode que enriquece issues con criterios de aceptación y consideraciones técnicas.
+- `prompts/task-planner.chatmode.md` — Chatmode para crear planes de implementación basados en investigación (revisar y validar manualmente).
+- `prompts/blueprint-mode.chatmode.md` — Chatmode de especificación y diseño (Blueprint Mode), usar para trabajo de arquitectura y especificaciones detalladas.
+- `prompts/suggest-awesome-github-copilot-chatmodes.prompt.md` — Sugiere chatmodes externos (revisión humana recomendada antes de incorporación).
+
+Consulta `ai-manifest.md` para el índice canónico de prioridades y para saber qué archivos de `.github/` tomar primero.
 
 ### Al trabajar en este proyecto:
 
