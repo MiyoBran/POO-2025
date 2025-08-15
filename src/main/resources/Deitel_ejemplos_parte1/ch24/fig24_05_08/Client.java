@@ -3,6 +3,7 @@
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.ObjectInputFilter;
 import java.io.ObjectOutputStream;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -101,6 +102,17 @@ public class Client extends JFrame
       // set up input stream for objects
       input = new ObjectInputStream( client.getInputStream() );
 
+      // Mitigation: restrict deserialization to Strings only to avoid
+      // unsafe deserialization of arbitrary classes. Requires Java 9+.
+      try {
+         ObjectInputFilter filter = ObjectInputFilter.Config.createFilter("java.lang.String;!*");
+         input.setObjectInputFilter(filter);
+      } catch ( Exception ex ) {
+         // If filters are not supported for some reason, log and continue
+         // fallback: we'll still validate the object after readObject
+         ex.printStackTrace();
+      }
+
       displayMessage( "\nGot I/O streams\n" );
    } // end method getStreams
 
@@ -114,8 +126,14 @@ public class Client extends JFrame
       { 
          try // read message and display it
          {
-            message = ( String ) input.readObject(); // read new message
-            displayMessage( "\n" + message ); // display message
+            Object obj = input.readObject(); // read new object
+            if ( obj instanceof String ) {
+               message = ( String ) obj; // safe cast after check
+               displayMessage( "\n" + message ); // display message
+            } else {
+               displayMessage( "\nReceived unexpected object type: " +
+                  (obj == null ? "null" : obj.getClass().getName()) );
+            }
          } // end try
          catch ( ClassNotFoundException classNotFoundException ) 
          {
