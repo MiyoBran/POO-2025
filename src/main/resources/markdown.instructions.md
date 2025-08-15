@@ -44,9 +44,13 @@ Ensure compliance with the following validation requirements:
   - `categories`: The categories for the post. These categories must be from the list in /categories.txt.
   - `tags`: The tags for the post.
   - `ai_note`: Indicate if AI was used in the creation of the post.
-  - `summary`: A brief summary of the post. Recommend a summary based on the content when possible.
+  - `summary`: A brief summary of the post. Recommend a summary based on the
+    content when possible.
   - `post_date`: The publication date of the post.
 
-- **Content Rules**: Ensure that the content follows the markdown content rules specified above.
-- **Formatting**: Ensure that the content is properly formatted and structured according to the guidelines.
-- **Validation**: Run the validation tools to check for compliance with the rules and guidelines.
+- **Content Rules**: Ensure that the content follows the markdown content rules
+  specified above.
+- **Formatting**: Ensure that the content is properly formatted and structured
+  according to the guidelines.
+- **Validation**: Run the validation tools to check for compliance with the
+  rules and guidelines.

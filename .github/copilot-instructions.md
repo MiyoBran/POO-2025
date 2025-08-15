@@ -29,11 +29,13 @@ POO-2025/
 
 ## 🛠️ Configuración Técnica
 
-- **Java**: 17+
+- **Java**: 21+
 - **Build Tool**: Maven 3.6+
 - **Testing**: JUnit 5
 - **IDE**: Compatible con VS Code, Eclipse, IntelliJ IDEA
 - **Plataformas**: Windows y Linux
+
+> Nota rápida para agentes: Ver `ai-manifest.md` para el índice canónico de archivos de instrucción en `.github/`.
 
 ## 📝 Convenciones de Código
 
@@ -137,13 +139,22 @@ mvn package
    - **PREVALECE** sobre cualquier otra instrucción en caso de conflicto
 
 2. **📝 BUENAS PRÁCTICAS DE DESARROLLO**
-   - `.github/java.instructions.md` - Estándares para código Java
-   - `.github/java-docs.prompt.md` - Convenciones para JavaDoc  
-   - `.github/java-junit.prompt.md` - Estándares para tests JUnit
-   - `.github/markdown.instructions.md` - Formato para archivos Markdown
+        - `.github/prompts/java.instructions.md` - Estándares para código Java
+        - `.github/prompts/java-docs.prompt.md` - Convenciones para JavaDoc  
+        - `.github/prompts/java-junit.prompt.md` - Estándares para tests JUnit
+        - `.github/prompts/markdown.instructions.md` - Formato para archivos Markdown
 
 3. **🏗️ INSTRUCCIONES DEL PROYECTO**
    - `.github/copilot-instructions.md` - Contexto y estructura del proyecto POO-2025
+
+### Notas de uso (cuándo usar cada guía)
+
+Estas notas son un recordatorio rápido para agentes y desarrolladores:
+
+- `prompts/java.instructions.md` — Usar para cambios de diseño y estilo en Java: refactorings, prevención de code smells y decisiones de arquitectura.
+- `prompts/java-docs.prompt.md` — Usar al generar o revisar JavaDoc (resúmenes, `@param`, `@return`, `@throws`, ejemplos en bloque).
+- `prompts/java-junit.prompt.md` — Usar cuando se creen o revisen tests unitarios (JUnit 5): casos parametrizados, mocks y organización de suites.
+- `prompts/markdown.instructions.md` — Usar al escribir o validar contenido Markdown: front-matter, encabezados, listas y formato general.
 
 ### Al trabajar en este proyecto:
 
