@@ -19,6 +19,11 @@
     <module name="AvoidStarImport"/>
     <module name="ConstantName"/>
     <module name="LocalVariableName"/>
+  <!-- Ruleset: avoid star imports, enforce naming conventions, and check for line length, cyclomatic complexity, and magic numbers -->
+  <module name="TreeWalker">
+    <module name="AvoidStarImport"/>
+    <module name="ConstantName"/>
+    <module name="LocalVariableName"/>
     <module name="MethodName"/>
     <module name="TypeName"/>
     <module name="LineLength">
