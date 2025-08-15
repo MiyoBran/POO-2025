@@ -37,6 +37,10 @@ Estos archivos aseguran que GitHub Copilot mantenga consistencia en:
 
 Estos archivos son automáticamente detectados por GitHub Copilot cuando trabajas en el repositorio, asegurando que todas las sugerencias de código sigan las mejores prácticas definidas para el proyecto educativo POO-2025.
 
+## Punto de entrada para agentes AI
+
+Para agentes o bots automáticos (Copilot, LLMs, CI bots), usar `ai-manifest.md` como índice principal. Ese archivo centraliza prioridades y explica qué archivos de `.github/` son fuente de verdad. Siempre consultar `buenas-practicas-POO.instructions.md` primero.
+
 ---
 
 *Configuración del repositorio - POO-2025*

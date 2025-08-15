@@ -29,11 +29,13 @@ POO-2025/
 
 ## 🛠️ Configuración Técnica
 
-- **Java**: 17+
+- **Java**: 21+
 - **Build Tool**: Maven 3.6+
 - **Testing**: JUnit 5
 - **IDE**: Compatible con VS Code, Eclipse, IntelliJ IDEA
 - **Plataformas**: Windows y Linux
+
+> Nota rápida para agentes: Ver `ai-manifest.md` para el índice canónico de archivos de instrucción en `.github/`.
 
 ## 📝 Convenciones de Código
 

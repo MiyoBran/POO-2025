@@ -18,10 +18,7 @@
 
 ## 🎯 Resumen Rápido
 
-- **Proyecto**: Ejercicios de POO en Java (Académico)
-- **Estructura**: Maven + Java 17 + JUnit 5
-- **Estado**: Ejemplos temporales que serán actualizados con TPs oficiales
-- **Compatibilidad**: VS Code, Eclipse, IntelliJ IDEA (Windows/Linux)
+**Estructura**: Maven + Java 21 + JUnit 5
 
 ## 📝 Convenciones Clave
 
