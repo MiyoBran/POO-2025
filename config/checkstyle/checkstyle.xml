@@ -9,6 +9,22 @@
     <module name="ConstantName"/>
     <module name="LocalVariableName"/>
     <module name="MethodName"/>
+  <!-- Enhanced ruleset: avoid star imports, enforce naming conventions, and check for line length, cyclomatic complexity, and magic numbers -->
+  <module name="TreeWalker">
+    <module name="AvoidStarImport"/>
+    <module name="ConstantName"/>
+    <module name="LocalVariableName"/>
+    <module name="MethodName"/>
     <module name="TypeName"/>
+    <module name="LineLength">
+      <property name="max" value="120"/>
+    </module>
+    <module name="CyclomaticComplexity">
+      <property name="max" value="10"/>
+    </module>
+    <module name="MagicNumber">
+      <property name="ignoreNumbers" value="0,1,-1"/>
+      <property name="ignoreHashCodeMethod" value="true"/>
+    </module>
   </module>
 </module>
