@@ -44,3 +44,15 @@ Estas notas ayudan a los agentes a seleccionar la guía más apropiada para la t
 - `prompts/java-junit.prompt.md` — Usar cuando se creen o revisen pruebas unitarias (JUnit 5), incluidas pruebas parametrizadas, organización de tests y mejores prácticas de aserciones/mocking.
 - `prompts/markdown.instructions.md` — Usar al crear o validar contenidos Markdown (README, guías, posts). Esta guía define front-matter, niveles de encabezado y reglas de formato que deben cumplirse antes de publicar.
 
+## Nota sobre copias en `src/main/resources`
+
+Algunos archivos de guía y prompts existen también en `src/main/resources/` como copias históricas o para empaquetado. Esas copias NO son canónicas. Agentes automáticos y revisores humanos deben preferir siempre las versiones bajo `.github/prompts/` o los archivos listados en la sección "Archivo de referencia" arriba.
+
+Reglas rápidas:
+
+- Leer y usar archivos en `.github/prompts/` como fuente de verdad.
+
+- Ignorar los archivos homónimos que aparezcan en `src/main/resources/` salvo que un humano indique explícitamente lo contrario.
+
+- Si se desea convertir una copia histórica en la versión canónica, moverla a `.github/prompts/` y actualizar este `ai-manifest.md`.
+
