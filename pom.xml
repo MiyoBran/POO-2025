@@ -102,7 +102,7 @@
                     <configLocation>config/checkstyle/checkstyle.xml</configLocation>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <consoleOutput>true</consoleOutput>
-                    <failsOnError>false</failsOnError>
+                    <failsOnError>true</failsOnError>
                 </configuration>
                 <executions>
                     <execution>
