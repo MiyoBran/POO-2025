@@ -68,6 +68,7 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
 
@@ -75,7 +76,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.1.2</version>
+                <configuration>
+                    <!-- Ensure JUnit Platform (JUnit 5) is used -->
+                    <useModulePath>false</useModulePath>
+                </configuration>
             </plugin>
 
             <!-- Plugin para ejecutar aplicaciones Java -->
