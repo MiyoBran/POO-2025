@@ -1,4 +1,4 @@
-package tp01.GUI;
+package tp01.gui;
 
 import javax.swing.JFrame;
 
