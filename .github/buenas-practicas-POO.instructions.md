@@ -28,7 +28,7 @@
 
 ## 👨‍💻 Programación
 
-- Utilizar **paquetes** para agrupar clases por su funcionalidad (`modelo`, `test`, `gui`, etc.).  
+- Utilizar **paquetes** para agrupar clases por su funcionalidad (`tp1.modelo`, `test`, `gui`, etc.).  
   📌 Los nombres de los paquetes se escriben en **minúsculas**.
   
 - Para **manejo de listas**, se recomienda usar implementaciones de la interfaz `List` (`ArrayList`, `LinkedList`, etc.) en lugar de arreglos simples para evitar errores con el índice.
