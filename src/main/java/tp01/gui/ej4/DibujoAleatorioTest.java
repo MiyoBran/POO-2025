@@ -1,4 +1,4 @@
-package tp01.gui.Tp1GEj4.gui;
+package tp01.gui.ej4;
 
 
 public class DibujoAleatorioTest {
