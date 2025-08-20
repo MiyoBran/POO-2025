@@ -1,4 +1,4 @@
-package tp01.gui.Tp1GEj2.gui;
+package tp01.gui.ej2;
 
 
 public class CirculosConcentricos {
