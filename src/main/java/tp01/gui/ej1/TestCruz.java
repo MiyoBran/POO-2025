@@ -1,4 +1,4 @@
-package tp01.gui;
+package tp01.gui.ej1;
 
 /**
  * Clase de prueba para lanzar la ventana con la cruz centrada.
