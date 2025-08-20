@@ -79,7 +79,7 @@
                 <version>3.1.2</version>
                 <configuration>
                     <!-- Ensure JUnit Platform (JUnit 5) is used -->
-                    <useModulePath>false</useModulePath>
+                    <!-- <useModulePath>false</useModulePath> -->
                 </configuration>
             </plugin>
 
