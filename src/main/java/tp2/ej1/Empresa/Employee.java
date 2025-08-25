@@ -1,8 +1,8 @@
-package tp2Empresa;
+package tp2.ej1.Empresa;
 // Fig. 10.4: Employee.java
 // Employee abstract superclass.
 
-public abstract class Employee 
+public abstract class Employee
 {
    private String firstName;
    private String lastName;
@@ -55,7 +55,7 @@ public abstract class Employee
    // return String representation of Employee object
    public String toString()
    {
-      return String.format( "%s %s\nsocial security number: %s", 
+      return String.format( "%s %s\nsocial security number: %s",
          getFirstName(), getLastName(), getSocialSecurityNumber() );
    } // end method toString
 

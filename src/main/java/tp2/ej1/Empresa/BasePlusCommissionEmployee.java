@@ -1,13 +1,13 @@
-package tp2Empresa;
+package tp2.ej1.Empresa;
 // Fig. 10.8: BasePlusCommissionEmployee.java
 // BasePlusCommissionEmployee class extends CommissionEmployee.
 
-public class BasePlusCommissionEmployee extends CommissionEmployee 
+public class BasePlusCommissionEmployee extends CommissionEmployee
 {
    private double baseSalary; // base salary per week
 
    // six-argument constructor
-   public BasePlusCommissionEmployee( String first, String last, 
+   public BasePlusCommissionEmployee( String first, String last,
       String ssn, double sales, double rate, double salary )
    {
       super( first, last, ssn, sales, rate );
@@ -35,10 +35,10 @@ public class BasePlusCommissionEmployee extends CommissionEmployee
    // return String representation of BasePlusCommissionEmployee object
    public String toString()
    {
-      return String.format( "%s %s; %s: $%,.2f", 
-         "base-salaried", super.toString(), 
+      return String.format( "%s %s; %s: $%,.2f",
+         "base-salaried", super.toString(),
          "base salary", getBaseSalary() );
-   } // end method toString   
+   } // end method toString
 } // end class BasePlusCommissionEmployee
 
 

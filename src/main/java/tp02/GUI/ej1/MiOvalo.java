@@ -1,59 +1,46 @@
-package tp01.gui.ej4;
+package tp02.GUI.ej1;
 
-import java.awt.Graphics;
 import java.awt.Color;
+import java.awt.Graphics;
 import java.util.Objects;
 
 /**
  * Representa un óvalo con posición, tamaño, color y si es relleno o no.
  * Utilizado para el dibujo de óvalos aleatorios en el ejercicio 4.
  */
-public class MiOvalo {
-    /** Coordenada X de la esquina superior izquierda. */
-    private int x;
-    /** Coordenada Y de la esquina superior izquierda. */
-    private int y;
+public class MiOvalo extends MiFigura {
+    // La clase "Padre" tiene X1, Y1 y Color.
+    // Acá tenemos Ancho, Alto y Relleno.
     /** Ancho del óvalo. */
     private int ancho;
     /** Alto del óvalo. */
     private int alto;
-    /** Color del óvalo. */
-    private Color color;
     /** Indica si el óvalo es relleno o solo contorno. */
     private boolean relleno;
 
+    // Constructor por defecto.
+    public MiOvalo() {
+      super(); // Llama al constructor de MiFigura (X1=0, Y1=0, Color= black)
+      this.ancho = 0;
+      this.alto = 0;
+      this.relleno = false;
+    }
+
     /**
      * Constructor del óvalo.
-     * @param x coordenada X
-     * @param y coordenada Y
+     * @see MiFigura#MiFigura(int, int, Color)
+     * @param x coordenada X del óvalo
+     * @param y coordenada Y del óvalo
      * @param ancho ancho del óvalo
      * @param alto alto del óvalo
      * @param color color del óvalo
      * @param relleno true si es relleno, false si es solo contorno
      */
     public MiOvalo(int x, int y, int ancho, int alto, Color color, boolean relleno) {
-        this.x = x;
-        this.y = y;
+        super(x, y, color); // Llama al constructor de MiFigura
         this.ancho = ancho;
         this.alto = alto;
-        this.color = color;
         this.relleno = relleno;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 
     public int getAncho() {
@@ -72,13 +59,6 @@ public class MiOvalo {
         this.alto = alto;
     }
 
-    public Color getColor() {
-        return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
 
     public boolean isRelleno() {
         return relleno;
@@ -91,23 +71,27 @@ public class MiOvalo {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof MiOvalo miOvalo)) return false;
-        return x == miOvalo.x && y == miOvalo.y && ancho == miOvalo.ancho && alto == miOvalo.alto && relleno == miOvalo.relleno && Objects.equals(color, miOvalo.color);
+        if (!(o instanceof MiOvalo)) return false;
+        if (!super.equals(o)) return false;
+        MiOvalo miOvalo = (MiOvalo) o;
+        return ancho == miOvalo.ancho
+            && alto == miOvalo.alto
+            && relleno == miOvalo.relleno;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(x, y, ancho, alto, color, relleno);
+        return Objects.hash(super.hashCode(), ancho, alto, relleno);
     }
 
     @Override
     public String toString() {
         return "MiOvalo{" +
-                "x=" + x +
-                ", y=" + y +
+                "x=" + getX1() +
+                ", y=" + getY1() +
                 ", ancho=" + ancho +
                 ", alto=" + alto +
-                ", color=" + color +
+                ", color=" + getColor() +
                 ", relleno=" + relleno +
                 '}';
     }
@@ -116,12 +100,13 @@ public class MiOvalo {
      * Dibuja el óvalo en el contexto gráfico dado.
      * @param g contexto gráfico
      */
+    @Override
     public void dibujar(Graphics g) {
-        g.setColor(color);
+        g.setColor(getColor());
         if (relleno) {
-            g.fillOval(x, y, ancho, alto);
+            g.fillOval(getX1(), getY1(), ancho, alto);
         } else {
-            g.drawOval(x, y, ancho, alto);
+            g.drawOval(getX1(), getY1(), ancho, alto);
         }
     }
 

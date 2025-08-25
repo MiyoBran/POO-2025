@@ -8,8 +8,8 @@ import java.awt.Graphics;
 public class CirculosConcentricosGUI extends JFrame {
     private int numCirculos;
     private int diametroInicial;
-    private static final int ANCHO_FRAME = 300;
-    private static final int ALTO_FRAME = 300;
+    private static final int ANCHO_FRAME = 600;
+    private static final int ALTO_FRAME = 600;
 
     public CirculosConcentricosGUI() {
         this.cargarDatos();

@@ -4,13 +4,30 @@ import java.awt.Graphics;
 import java.awt.Color;
 import java.util.Objects;
 
+/**
+ * Representa una línea con coordenadas de inicio y fin, y un color.
+ * Utilizada para el dibujo de líneas aleatorias en el ejercicio 4.
+ */
 public class MiLinea {
+    /** Coordenada X del punto inicial. */
     protected int x1;
+    /** Coordenada Y del punto inicial. */
     protected int y1;
+    /** Coordenada X del punto final. */
     protected int x2;
+    /** Coordenada Y del punto final. */
     protected int y2;
+    /** Color de la línea. */
     protected Color color;
 
+    /**
+     * Constructor de la línea.
+     * @param x1 coordenada X inicial
+     * @param y1 coordenada Y inicial
+     * @param x2 coordenada X final
+     * @param y2 coordenada Y final
+     * @param color color de la línea
+     */
     public MiLinea(int x1, int y1, int x2, int y2, Color color) {
         this.x1 = x1;
         this.y1 = y1;
@@ -83,12 +100,12 @@ public class MiLinea {
     }
 
     /**
-     * Dibuja una linea en la pantalla según las propiedades definidas.
-     *
-     * @param g el objeto Graphics que se utilizará para dibujar la linea
+     * Dibuja la línea en el contexto gráfico dado.
+     * @param g contexto gráfico
      */
     public void dibujar(Graphics g) {
         g.setColor(color);
         g.drawLine(x1, y1, x2, y2);
     }
+
 }

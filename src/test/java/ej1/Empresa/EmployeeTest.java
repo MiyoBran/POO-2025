@@ -1,4 +1,4 @@
-package tp2Empresa;
+package ej1.Empresa;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -1,5 +1,4 @@
-package tp01.gui.ej4;
-
+package tp02.GUI.ej1;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;

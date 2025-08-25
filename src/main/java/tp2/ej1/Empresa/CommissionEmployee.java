@@ -1,14 +1,14 @@
-package tp2Empresa;
+package tp2.ej1.Empresa;
 // Fig. 10.7: CommissionEmployee.java
 // CommissionEmployee class extends Employee.
 
-public class CommissionEmployee extends Employee 
+public class CommissionEmployee extends Employee
 {
    private double grossSales; // gross weekly sales
    private double commissionRate; // commission percentage
 
    // five-argument constructor
-   public CommissionEmployee( String first, String last, String ssn, 
+   public CommissionEmployee( String first, String last, String ssn,
       double sales, double rate )
    {
       super( first, last, ssn );
@@ -49,9 +49,9 @@ public class CommissionEmployee extends Employee
    // return String representation of CommissionEmployee object
    public String toString()
    {
-      return String.format( "%s: %s\n%s: $%,.2f; %s: %.2f", 
-         "commission employee", super.toString(), 
-         "gross sales", getGrossSales(), 
+      return String.format( "%s: %s\n%s: $%,.2f; %s: %.2f",
+         "commission employee", super.toString(),
+         "gross sales", getGrossSales(),
          "commission rate", getCommissionRate() );
    } // end method toString
 } // end class CommissionEmployee

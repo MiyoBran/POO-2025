@@ -1,13 +1,13 @@
-package tp2Empresa;
+package tp2.ej1.Empresa;
 // Fig. 10.5: SalariedEmployee.java
 // SalariedEmployee class extends Employee.
 
-public class SalariedEmployee extends Employee 
+public class SalariedEmployee extends Employee
 {
    private double weeklySalary;
 
    // four-argument constructor
-   public SalariedEmployee( String first, String last, String ssn, 
+   public SalariedEmployee( String first, String last, String ssn,
       double salary )
    {
       super( first, last, ssn ); // pass to Employee constructor
@@ -35,7 +35,7 @@ public class SalariedEmployee extends Employee
    // return String representation of SalariedEmployee object
    public String toString()
    {
-      return String.format( "salaried employee: %s\n%s: $%,.2f", 
+      return String.format( "salaried employee: %s\n%s: $%,.2f",
          super.toString(), "weekly salary", getWeeklySalary() );
    } // end method toString
 } // end class SalariedEmployee

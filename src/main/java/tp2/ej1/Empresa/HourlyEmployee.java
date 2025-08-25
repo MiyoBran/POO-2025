@@ -1,14 +1,14 @@
-package tp2Empresa;
+package tp2.ej1.Empresa;
 // Fig. 10.6: HourlyEmployee.java
 // HourlyEmployee class extends Employee.
 
-public class HourlyEmployee extends Employee 
+public class HourlyEmployee extends Employee
 {
    private double wage; // wage per hour
    private double hours; // hours worked for week
 
    // five-argument constructor
-   public HourlyEmployee( String first, String last, String ssn, 
+   public HourlyEmployee( String first, String last, String ssn,
       double hourlyWage, double hoursWorked )
    {
       super( first, last, ssn );
@@ -53,8 +53,8 @@ public class HourlyEmployee extends Employee
    // return String representation of HourlyEmployee object
    public String toString()
    {
-      return String.format( "hourly employee: %s\n%s: $%,.2f; %s: %,.2f", 
-         super.toString(), "hourly wage", getWage(), 
+      return String.format( "hourly employee: %s\n%s: $%,.2f; %s: %,.2f",
+         super.toString(), "hourly wage", getWage(),
          "hours worked", getHours() );
    } // end method toString
 } // end class HourlyEmployee

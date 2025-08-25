@@ -4,14 +4,33 @@ import java.awt.Graphics;
 import java.awt.Color;
 import java.util.Objects;
 
+/**
+ * Representa un rectángulo con posición, tamaño, color y si es relleno o no.
+ * Utilizado para el dibujo de rectángulos aleatorios en el ejercicio 4.
+ */
 public class MiRectangulo {
+    /** Coordenada X de la esquina superior izquierda. */
     private int x;
+    /** Coordenada Y de la esquina superior izquierda. */
     private int y;
+    /** Ancho del rectángulo. */
     private int ancho;
+    /** Alto del rectángulo. */
     private int alto;
+    /** Color del rectángulo. */
     private Color color;
+    /** Indica si el rectángulo es relleno o solo contorno. */
     private boolean relleno;
 
+    /**
+     * Constructor del rectángulo.
+     * @param x coordenada X
+     * @param y coordenada Y
+     * @param ancho ancho del rectángulo
+     * @param alto alto del rectángulo
+     * @param color color del rectángulo
+     * @param relleno true si es relleno, false si es solo contorno
+     */
     public MiRectangulo(int x, int y, int ancho, int alto, Color color, boolean relleno) {
         this.x = x;
         this.y = y;
@@ -94,9 +113,8 @@ public class MiRectangulo {
     }
 
     /**
-     * Dibuja un rectángulo en la pantalla según las propiedades definidas.
-     *
-     * @param g el objeto Graphics que se utilizará para dibujar el rectángulo
+     * Dibuja el rectángulo en el contexto gráfico dado.
+     * @param g contexto gráfico
      */
     public void dibujar(Graphics g) {
         g.setColor(color);
@@ -106,4 +124,5 @@ public class MiRectangulo {
             g.drawRect(x, y, ancho, alto);
         }
     }
+
 }
