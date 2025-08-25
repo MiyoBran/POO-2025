@@ -71,9 +71,8 @@ public class MiOvalo extends MiFigura {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof MiOvalo)) return false;
+        if (!(o instanceof MiOvalo miOvalo)) return false;
         if (!super.equals(o)) return false;
-        MiOvalo miOvalo = (MiOvalo) o;
         return ancho == miOvalo.ancho
             && alto == miOvalo.alto
             && relleno == miOvalo.relleno;

@@ -83,9 +83,8 @@ public class MiLinea extends MiFigura {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof MiLinea)) return false;
+        if (!(o instanceof MiLinea miLinea)) return false;
         if (!super.equals(o)) return false;
-        MiLinea miLinea = (MiLinea) o;
         return x2 == miLinea.x2 && y2 == miLinea.y2;
     }
 

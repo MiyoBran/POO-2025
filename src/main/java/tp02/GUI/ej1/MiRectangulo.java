@@ -100,10 +100,9 @@ public class MiRectangulo extends MiFigura {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof MiRectangulo)) return false;
+        if (!(o instanceof MiRectangulo other)) return false;
         if (!super.equals(o)) return false;
-        MiRectangulo that = (MiRectangulo) o;
-        return ancho == that.ancho && alto == that.alto && relleno == that.relleno;
+        return ancho == other.ancho && alto == other.alto && relleno == other.relleno;
     }
 
     /**
