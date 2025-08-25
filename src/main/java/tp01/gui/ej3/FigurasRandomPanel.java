@@ -1,4 +1,4 @@
-package tp01.gui.Tp1GEj3.gui;
+package tp01.gui.ej3;
 
 import javax.swing.*;
 import java.awt.*;

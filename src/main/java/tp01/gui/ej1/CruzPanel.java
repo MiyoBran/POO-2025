@@ -1,4 +1,4 @@
-package tp01.gui;
+package tp01.gui.ej1;
 
 import javax.swing.JPanel;
 import java.awt.Graphics;
