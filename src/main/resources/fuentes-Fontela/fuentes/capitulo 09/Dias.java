@@ -1,0 +1,1 @@
+enum Dias { Lunes, Martes, Miercoles, Jueves, Viernes }
