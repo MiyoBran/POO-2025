@@ -87,11 +87,11 @@ public class MiOvalo extends MiFigura {
     @Override
     public String toString() {
         return "MiOvalo{" +
-                "x=" + getX1() +
-                ", y=" + getY1() +
+                "x=" + super.getX1() +
+                ", y=" + super.getY1() +
                 ", ancho=" + ancho +
                 ", alto=" + alto +
-                ", color=" + getColor() +
+                ", color=" + super.getColor() +
                 ", relleno=" + relleno +
                 '}';
     }
@@ -102,11 +102,11 @@ public class MiOvalo extends MiFigura {
      */
     @Override
     public void dibujar(Graphics g) {
-        g.setColor(getColor());
+        g.setColor(super.getColor());
         if (relleno) {
-            g.fillOval(getX1(), getY1(), ancho, alto);
+            g.fillOval(super.getX1(), super.getY1(), ancho, alto);
         } else {
-            g.drawOval(getX1(), getY1(), ancho, alto);
+            g.drawOval(super.getX1(), super.getY1(), ancho, alto);
         }
     }
 

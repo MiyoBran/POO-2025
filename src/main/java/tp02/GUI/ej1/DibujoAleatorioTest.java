@@ -3,6 +3,9 @@ package tp02.GUI.ej1;
 
 public class DibujoAleatorioTest {
     public static void main(String[] args) {
-        new Dibujo();
+        int cantidad = Dibujo.solicitarCantidadFiguras();
+        Dibujo dibujo = new Dibujo(cantidad);
+
+        dibujo.setVisible(true);
     }
 }

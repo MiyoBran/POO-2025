@@ -84,11 +84,11 @@ public class MiRectangulo extends MiFigura {
      */
     @Override
     public void dibujar(Graphics g) {
-        g.setColor(getColor());
+        g.setColor(super.getColor());
         if (relleno) {
-            g.fillRect(getX1(), getY1(), ancho, alto);
+            g.fillRect(super.getX1(), super.getY1(), ancho, alto);
         } else {
-            g.drawRect(getX1(), getY1(), ancho, alto);
+            g.drawRect(super.getX1(), super.getY1(), ancho, alto);
         }
     }
 
@@ -118,11 +118,11 @@ public class MiRectangulo extends MiFigura {
     @Override
     public String toString() {
         return "MiRectangulo{" +
-                "x=" + getX1() +
-                ", y=" + getY1() +
+                "x=" + super.getX1() +
+                ", y=" + super.getY1() +
                 ", ancho=" + ancho +
                 ", alto=" + alto +
-                ", color=" + getColor() +
+                ", color=" + super.getColor() +
                 ", relleno=" + relleno +
                 '}';
     }

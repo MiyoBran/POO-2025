@@ -71,8 +71,8 @@ public class MiLinea extends MiFigura {
      */
     @Override
     public void dibujar(Graphics g) {
-        g.setColor(getColor());
-        g.drawLine(getX1(), getY1(), x2, y2);
+        g.setColor(super.getColor());
+        g.drawLine(super.getX1(), super.getY1(), x2, y2);
     }
 
     /**
@@ -98,4 +98,14 @@ public class MiLinea extends MiFigura {
         return Objects.hash(super.hashCode(), x2, y2);
     }
 
+    @Override
+    public String toString() {
+        return "MiLinea{" +
+                "x1=" + super.getX1() +
+                ", y1=" + super.getY1() +
+                ", x2=" + x2 +
+                ", y2=" + y2 +
+                ", color=" + super.getColor() +
+                '}';
+    }
 }
