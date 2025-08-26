@@ -1,18 +1,26 @@
 // Elipse.java
 package tp02.GUI.ej3;
 
+import java.awt.*;
+
 public class Elipse extends Figura {
 
 	private double radioMayor;
 	private double radioMenor;
 	private Punto centro;
 	private double anguloRadioMayor;
+  // atributos agregados por la consigna
+  private boolean relleno;
+  private Color color;
 
-	public Elipse (double radioMayor, double radioMenor, Punto centro, double anguloRadioMayor) {
+  // Constructor completo
+	public Elipse (double radioMayor, double radioMenor, Punto centro, double anguloRadioMayor, boolean relleno, Color color) {
 		this.radioMayor = radioMayor;
 		this.radioMenor = radioMenor;
 		this.centro = centro;
 		this.anguloRadioMayor = anguloRadioMayor;
+    this.relleno = relleno;
+    this.color = color;
 	}
 
 	public Elipse (double radioMayor, double radioMenor) {
@@ -20,6 +28,9 @@ public class Elipse extends Figura {
 		this.radioMenor = radioMenor;
 		this.centro = new Punto(0, 0);
 		this.anguloRadioMayor = 0;
+    // valores por defecto para relleno y color segun la consigna
+    this.relleno = false;
+    this.color = Color.BLACK;
 	}
 
 	public double getRadioMayor ( ) {
@@ -38,6 +49,18 @@ public class Elipse extends Figura {
 		return anguloRadioMayor;
 	}
 
+  // Setters para Relleno y Color como pide la consigna
+  public void setRelleno(boolean relleno) {
+    this.relleno = relleno;
+  }
+
+  // Metodo Abstracto de la consigna para cambiar el color.
+  @Override
+  public void setColor(Color color) {
+    this.color = color;
+  }
+
+  /// Metodos
 	public double area ( ) {
 		return Math.PI * getRadioMayor( ) * getRadioMenor( );
 	}

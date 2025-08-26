@@ -1,15 +1,19 @@
 // Poligono.java
 package tp02.GUI.ej3;
 
+import java.awt.*;
+
 public class Poligono extends Figura {
 
 	private Punto[ ] contorno;
+  private Color color;
 
 	public Poligono (Punto[ ] contorno) {
 		if (contorno.length < 3)
 			// veremos el significado de lo que sigue en un cap�tulo posterior:
 			throw new IllegalArgumentException( );
 		this.contorno = contorno;
+    this.color = Color.BLACK;
 	}
 
 	static protected double areaTrapecio (Punto p1, Punto p2) {
@@ -19,6 +23,12 @@ public class Poligono extends Figura {
 	public int numeroLados( ) {
 		return contorno.length;
 	}
+
+  // Metodo Abstracto de la consigna para cambiar el color.
+  @Override
+  public void setColor(Color color) {
+    this.color = color;
+  }
 
 	public double area ( ) {
 		double superficie =

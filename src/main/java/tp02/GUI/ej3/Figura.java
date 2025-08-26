@@ -1,6 +1,8 @@
 // Figura.java
 package tp02.GUI.ej3;
 
+import java.awt.*;
+
 public abstract class Figura {
 	public abstract double area ( );
 	public abstract double perimetro ( );
@@ -15,4 +17,8 @@ public abstract class Figura {
   public boolean figuraEquable(){
     return (this.area() == this.perimetro());
   }
+
+  // Metodos abstractos de la consigna del TP2.GUI.Ej3
+  public abstract void dibujar( );
+  public abstract void setColor(Color color);
 }

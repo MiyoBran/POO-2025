@@ -1,9 +1,13 @@
 // FiguraCompuesta.java
 package tp02.GUI.ej3;
 
+import java.awt.*;
+
 public class FiguraCompuesta extends Figura {
 
 	private Figura[ ] componentes;
+  private Color color;
+
 
 	public FiguraCompuesta (Figura[ ] componentes) {
 		this.componentes = componentes;
@@ -26,6 +30,12 @@ public class FiguraCompuesta extends Figura {
 			perimetro += componentes[i].perimetro( );
 		return perimetro;
 	}
+
+  public void setColor(Color color) {
+    for (Figura componente : componentes) {
+      componente.setColor(color);
+    }
+  }
 
 	public String tipo( ) {
 		return "figura compuesta";
