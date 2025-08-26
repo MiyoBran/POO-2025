@@ -1,6 +1,8 @@
 package tp02.GUI.ej2;
 
-import java.awt.*;
+
+import java.awt.Color;
+import java.awt.Graphics;
 import java.util.Objects;
 
 /**

@@ -1,7 +1,8 @@
 package tp02.GUI.ej2;
 
-import java.awt.*;
-import java.util.Objects;
+import java.awt.Color;
+import java.awt.Graphics;
+
 
 /**
  * Clase que representa un óvalo en el plano, definido por un punto de inicio (x1, y1)
@@ -44,18 +45,6 @@ public class MiOvalo extends MiFiguraDelimitada {
     super(x, y, ancho, alto, color, relleno); // Llama al constructor de MiFiguraDelimitada
   }
 
-  @Override
-  public String toString() {
-    return "MiOvalo{" +
-      "x=" + super.getX1() +
-      ", y=" + super.getY1() +
-      ", ancho=" + super.getAncho() +
-      ", alto=" + super.getAlto() +
-      ", color=" + super.getColor() +
-      ", relleno=" + super.isRelleno() +
-      '}';
-  }
-
   /**
    * Dibuja el óvalo en el contexto gráfico dado.
    *
@@ -76,6 +65,18 @@ public class MiOvalo extends MiFiguraDelimitada {
     if (this == o) return true;
     if (!(o instanceof MiOvalo)) return false;
     return super.equals(o);
+  }
+
+  @Override
+  public String toString() {
+    return "MiOvalo{" +
+      "x=" + super.getX1() +
+      ", y=" + super.getY1() +
+      ", ancho=" + super.getAncho() +
+      ", alto=" + super.getAlto() +
+      ", color=" + super.getColor() +
+      ", relleno=" + super.isRelleno() +
+      '}';
   }
 
 }

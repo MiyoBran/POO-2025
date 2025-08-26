@@ -1,6 +1,7 @@
 package tp02.GUI.ej2;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 
 /**
  * Clase que representa un rectángulo en el plano, definido por un punto de inicio (x1, y1)
@@ -75,4 +76,5 @@ public class MiRectangulo extends MiFiguraDelimitada {
     if (!(o instanceof MiRectangulo)) return false;
     return super.equals(o);
   }
+
 }
