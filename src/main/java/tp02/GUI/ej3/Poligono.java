@@ -1,7 +1,8 @@
 // Poligono.java
 package tp02.GUI.ej3;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class Poligono extends Figura {
 
@@ -28,6 +29,19 @@ public class Poligono extends Figura {
   @Override
   public void setColor(Color color) {
     this.color = color;
+  }
+
+  @Override
+  public void dibujar(Graphics g) {
+    g.setColor(color);
+    int n = contorno.length;
+    int[] xPoints = new int[n];
+    int[] yPoints = new int[n];
+    for (int i = 0; i < n; i++) {
+      xPoints[i] = (int) contorno[i].getX();
+      yPoints[i] = (int) contorno[i].getY();
+    }
+    g.drawPolygon(xPoints, yPoints, n);
   }
 
 	public double area ( ) {

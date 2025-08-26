@@ -1,7 +1,7 @@
 // FiguraCompuesta.java
 package tp02.GUI.ej3;
 
-import java.awt.*;
+import java.awt.Graphics;
 
 public class FiguraCompuesta extends Figura {
 
@@ -45,4 +45,11 @@ public class FiguraCompuesta extends Figura {
 		for (int i = 0; i < componentes.length; i++)
 			componentes[i].trasladar (deltaX, deltaY);
 	}
+
+  @Override
+  public void dibujar(Graphics g) {
+    for (Figura componente : componentes) {
+      componente.dibujar(g);
+    }
+  }
 }

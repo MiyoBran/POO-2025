@@ -19,6 +19,6 @@ public abstract class Figura {
   }
 
   // Metodos abstractos de la consigna del TP2.GUI.Ej3
-  public abstract void dibujar( );
+  public abstract void dibujar(Graphics g);
   public abstract void setColor(Color color);
 }
