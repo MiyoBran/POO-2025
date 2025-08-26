@@ -14,6 +14,15 @@ public class Elipse extends Figura {
   private boolean relleno;
   private Color color;
 
+  // Constructor sin relleno y color por defecto (para pasar pruebas unitarias anteriores)
+  public Elipse(double radioMayor, double radioMenor, Punto centro, double anguloRadioMayor) {
+    this.radioMayor = radioMayor;
+    this.radioMenor = radioMenor;
+    this.centro = centro;
+    this.anguloRadioMayor = anguloRadioMayor;
+    this.relleno = false;
+    this.color = Color.BLACK;
+  }
   // Constructor completo
   public Elipse(double radioMayor, double radioMenor, Punto centro, double anguloRadioMayor, boolean relleno, Color color) {
     this.radioMayor = radioMayor;

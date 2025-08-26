@@ -1,6 +1,7 @@
 // FiguraCompuesta.java
 package tp02.GUI.ej3;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class FiguraCompuesta extends Figura {
