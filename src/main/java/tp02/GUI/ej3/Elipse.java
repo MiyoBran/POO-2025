@@ -43,7 +43,7 @@ public class Elipse extends Figura {
 	}
 
 	private static double E1 (double k) {
-		// TODO: tabla de integral el�ptica
+		// TODO: tabla de integral eliptica
 		return 0;
 	}
 
@@ -59,7 +59,7 @@ public class Elipse extends Figura {
 
 	public String tipo( ) {
 		if (getRadioMayor( ) == getRadioMenor( ))
-			return "c�rculo";
+			return "circulo";
 		else return "elipse";
 	}
 

@@ -41,7 +41,7 @@ public class Poligono extends Figura {
 		else return new Segmento (contorno[i], contorno[0]);
 	}
 
-	// verifica si es un pol�gono con todos sus lados iguales
+	// verifica si es un poligono con todos sus lados iguales
 	public boolean regular( ) {
 		for (int i = 0; i < contorno.length-1; i++) {
 			if (lado(i).getLongitud( ) != lado(i+1).getLongitud( ))
@@ -52,21 +52,21 @@ public class Poligono extends Figura {
 
 	public String tipo( ) {
 		if (numeroLados( ) == 3 && regular( ))
-			return "tri�ngulo equil�tero";
+			return "triangulo equilatero";
 		if (numeroLados( ) == 4 && regular( ))
 			return "cuadrado";
 		String nombre = null;
 		switch (numeroLados( )) {
-			case 3 : nombre = "tri�ngulo"; break;
-			case 4 : nombre = "cuadril�tero"; break;
-			case 5 : nombre = "pent�gono"; break;
-			case 6 : nombre = "hex�gono"; break;
-			case 7 : nombre = "hept�gono"; break;
-			case 8 : nombre = "oct�gono"; break;
-			case 9 : nombre = "non�gono"; break;
-			case 10 : nombre = "dec�gono"; break;
-			case 12 : nombre = "dodec�gono"; break;
-			case 20 : nombre = "icos�gono"; break;
+			case 3 : nombre = "triangulo"; break;
+			case 4 : nombre = "cuadrilatero"; break;
+			case 5 : nombre = "pentagono"; break;
+			case 6 : nombre = "hexagono"; break;
+			case 7 : nombre = "heptagono"; break;
+			case 8 : nombre = "octagono"; break;
+			case 9 : nombre = "nonagono"; break;
+			case 10 : nombre = "decagono"; break;
+			case 12 : nombre = "dodecagono"; break;
+			case 20 : nombre = "icosagono"; break;
 			default : nombre = "sin nombre";
 		}
 		if (regular( ))
