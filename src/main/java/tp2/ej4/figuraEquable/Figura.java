@@ -1,5 +1,5 @@
 // Figura.java
-package tp02.GUI.ej3;
+package tp2.ej4.figuraEquable;
 
 public abstract class Figura {
 	public abstract double area ( );
@@ -15,4 +15,5 @@ public abstract class Figura {
   public boolean figuraEquable(){
     return (this.area() == this.perimetro());
   }
+
 }
