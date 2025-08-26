@@ -78,19 +78,6 @@ public class MiRectangulo extends MiFigura {
         this.relleno = relleno;
     }
 
-    /**
-     * Dibuja el rectángulo en el contexto gráfico dado.
-     * @param g contexto gráfico
-     */
-    @Override
-    public void dibujar(Graphics g) {
-        g.setColor(super.getColor());
-        if (relleno) {
-            g.fillRect(super.getX1(), super.getY1(), ancho, alto);
-        } else {
-            g.drawRect(super.getX1(), super.getY1(), ancho, alto);
-        }
-    }
 
     /**
      * Compara igualdad por valor de x1, y1, color (heredados) y ancho, alto, relleno (propios).
@@ -125,4 +112,20 @@ public class MiRectangulo extends MiFigura {
                 ", relleno=" + relleno +
                 '}';
     }
+
+  /**
+   * Dibuja el rectángulo en el contexto gráfico dado.
+   *
+   * @param g contexto gráfico
+   */
+  @Override
+  public void dibujar(Graphics g) {
+    g.setColor(super.getColor());
+    if (relleno) {
+      g.fillRect(super.getX1(), super.getY1(), ancho, alto);
+    } else {
+      g.drawRect(super.getX1(), super.getY1(), ancho, alto);
+    }
+  }
+
 }
