@@ -3,13 +3,14 @@ package tp02.GUI.ej3;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Color;
 
 public class FiguraCompuesta extends Figura {
 
 	private Figura[ ] componentes;
   private Color color;
 
-
+  // Constructor que recibe un array de componentes
 	public FiguraCompuesta (Figura[ ] componentes) {
 		this.componentes = componentes;
 	}
