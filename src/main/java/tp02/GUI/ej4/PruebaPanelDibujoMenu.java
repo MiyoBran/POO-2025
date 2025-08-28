@@ -7,6 +7,8 @@ import java.awt.*;
 
 public class PruebaPanelDibujoMenu {
   public static void main(String[] args) {
+
+
     // Crear figuras simples
     Punto centro1 = new Punto(100, 100);
     Elipse elipse1 = new Elipse(50, 30, centro1, 0, false, Color.RED);

@@ -6,7 +6,9 @@ import java.awt.Graphics;
 
 public class Poligono extends Figura {
 
-	private Punto[ ] contorno;
+	@SuppressWarnings("FieldMayBeFinal")
+  private Punto[ ] contorno;
+  // Atributos adicionales para la consigna
   private Color color;
   private boolean relleno ;
 
@@ -28,15 +30,6 @@ public class Poligono extends Figura {
     this.relleno = relleno;
   }
 
-
-  static protected double areaTrapecio (Punto p1, Punto p2) {
-		return (p1.getY( ) + p2.getY( )) * (p2.getX( ) - p1.getX( )) / 2;
-	}
-
-	public int numeroLados( ) {
-		return contorno.length;
-	}
-
   // Setter para Relleno y Color como pide la consigna
   // Metodo Abstracto de la consigna para cambiar el color.
   @Override
@@ -47,6 +40,16 @@ public class Poligono extends Figura {
   public void setRelleno(boolean relleno) {
     this.relleno = relleno;
   }
+
+  // Metodos que estaban en la clase.
+
+  static protected double areaTrapecio (Punto p1, Punto p2) {
+		return (p1.getY( ) + p2.getY( )) * (p2.getX( ) - p1.getX( )) / 2;
+	}
+
+	public int numeroLados( ) {
+		return contorno.length;
+	}
 
 	public double area ( ) {
 		double superficie =
@@ -83,7 +86,8 @@ public class Poligono extends Figura {
 			return "triangulo equilatero";
 		if (numeroLados( ) == 4 && regular( ))
 			return "cuadrado";
-		String nombre = null;
+    //noinspection UnusedAssignment
+    String nombre = null;
 		switch (numeroLados( )) {
 			case 3 : nombre = "triangulo"; break;
 			case 4 : nombre = "cuadrilatero"; break;
@@ -102,11 +106,13 @@ public class Poligono extends Figura {
 		return nombre;
 	}
 
-	public void trasladar (double deltaX, double deltaY) {
+	@SuppressWarnings("ForLoopReplaceableByForEach")
+  public void trasladar (double deltaX, double deltaY) {
 		for (int i = 0; i < contorno.length; i++)
 			contorno[i].trasladar (deltaX, deltaY);
 	}
 
+  // Dibuja la figura en el contexto de dibujo dado. Consigna
   @Override
   public void dibujar(Graphics g) {
     g.setColor(color);
@@ -117,10 +123,9 @@ public class Poligono extends Figura {
       xPoints[i] = (int) contorno[i].getX();
       yPoints[i] = (int) contorno[i].getY();
     }
+    g.drawPolygon(xPoints, yPoints, n);
     if (relleno) {
       g.fillPolygon(xPoints, yPoints, n);
-    }else {
-      g.drawPolygon(xPoints, yPoints, n);
     }
   }
 

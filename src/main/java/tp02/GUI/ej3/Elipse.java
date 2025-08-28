@@ -108,10 +108,9 @@ public class Elipse extends Figura {
     int y = (int) (centro.getY() - radioMenor);
     int width = (int) (2 * radioMayor);
     int height = (int) (2 * radioMenor);
+    g.drawOval(x, y, width, height);
     if (relleno) {
       g.fillOval(x, y, width, height);
-    } else {
-      g.drawOval(x, y, width, height);
     }
   }
 
