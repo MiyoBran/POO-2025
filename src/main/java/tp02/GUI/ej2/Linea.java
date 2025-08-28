@@ -6,6 +6,7 @@ import java.awt.Graphics;
 public class Linea extends Figura {
 
     // Constructor sin argumentos, crea un punto en (0,0) de colo negro
+  @SuppressWarnings( "unused")
     public Linea() {
         super();
     }

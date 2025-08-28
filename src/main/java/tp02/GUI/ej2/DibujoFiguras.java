@@ -80,11 +80,6 @@ public class DibujoFiguras extends JFrame {
     // Inicializar el array de figuras
     this.figuras = new Figura[numFiguras];
 
-    // para garantizar al menos 1 de cada una, el minimo de figuras debe ser 3
-    //    this.numLineas = 1;
-    //    this.numOvalos = 1;
-    //    this.numRectangulos = 1;
-
     for (int i = 0; i < numFiguras; i++) {
       int tipoFigura = rand.nextInt(3);
       // Propiedades generales de cualquier figura.

@@ -17,6 +17,7 @@ public class Ovalo extends FiguraDelimitada {
   // La clase "Padre" MiFiguraDelimitada tiene Ancho, Alto (calculados) y Relleno.
 
   // Llama al constructor de MiFiguraDelimitada
+  @SuppressWarnings( "unused")
   public Ovalo() {
     super();
   }
