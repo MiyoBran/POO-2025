@@ -21,8 +21,8 @@ public class MiOvalo extends MiFigura {
     // Constructor por defecto.
     public MiOvalo() {
       super(); // Llama al constructor de MiFigura (X1=0, Y1=0, Color= black)
-      this.ancho = 0;
-      this.alto = 0;
+      this.ancho = 100;
+      this.alto = 100;
       this.relleno = false;
     }
 
@@ -102,11 +102,11 @@ public class MiOvalo extends MiFigura {
     @Override
     public void dibujar(Graphics g) {
         g.setColor(super.getColor());
+      g.drawOval(super.getX1(), super.getY1(), ancho, alto);
         if (relleno) {
             g.fillOval(super.getX1(), super.getY1(), ancho, alto);
-        } else {
-            g.drawOval(super.getX1(), super.getY1(), ancho, alto);
         }
+
     }
 
 }

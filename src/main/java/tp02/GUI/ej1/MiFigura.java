@@ -9,7 +9,7 @@ public abstract class MiFigura {
   /** Coordenada Y del punto inicial. */
   private int y1;
   /** Color de la figura. */
-  protected Color color;
+  private Color color;
 
   public MiFigura(){
     this.x1 = 0;

@@ -53,10 +53,9 @@ public class MiOvalo extends MiFiguraDelimitada {
   @Override
   public void dibujar(Graphics g) {
     g.setColor(super.getColor());
+    g.drawOval(super.getX1(), super.getY1(), super.getAncho(), super.getAlto());
     if (super.isRelleno()) {
       g.fillOval(super.getX1(), super.getY1(), super.getAncho(), super.getAlto());
-    } else {
-      g.drawOval(super.getX1(), super.getY1(), super.getAncho(), super.getAlto());
     }
   }
 

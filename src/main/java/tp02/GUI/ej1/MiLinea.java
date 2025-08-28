@@ -27,8 +27,8 @@ public class MiLinea extends MiFigura {
      */
     public MiLinea() {
         super();
-        this.x2 = 0;
-        this.y2 = 0;
+        this.x2 = 100;
+        this.y2 = 100;
     }
 
     /**

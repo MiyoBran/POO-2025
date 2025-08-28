@@ -29,8 +29,8 @@ public class MiRectangulo extends MiFigura {
      */
     public MiRectangulo() {
         super();
-        this.ancho = 0;
-        this.alto = 0;
+        this.ancho = 100;
+        this.alto = 100;
         this.relleno = false;
     }
 
@@ -121,10 +121,9 @@ public class MiRectangulo extends MiFigura {
   @Override
   public void dibujar(Graphics g) {
     g.setColor(super.getColor());
+    g.drawRect(super.getX1(), super.getY1(), ancho, alto);
     if (relleno) {
       g.fillRect(super.getX1(), super.getY1(), ancho, alto);
-    } else {
-      g.drawRect(super.getX1(), super.getY1(), ancho, alto);
     }
   }
 
