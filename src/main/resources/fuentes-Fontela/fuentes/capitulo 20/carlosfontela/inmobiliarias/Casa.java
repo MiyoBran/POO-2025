@@ -36,12 +36,12 @@ public class Casa extends Inmueble {
 	public void imprimirDatos( ) {
 		super.imprimirDatos( );
 		System.out.println ("Garage: " + getGarage( ));
-		System.out.println ("Jardín: " + getJardin( ));
+		System.out.println ("Jardin: " + getJardin( ));
 		System.out.println ("Pileta: " + getPileta( ));
 		System.out.println ("Superficie terreno: " + getSuperficieTerreno( ));
 	}
 
-	// nuevo método:
+	// nuevo mÃ©todo:
 	public double comisionVendedor( ) {
 		if (getJardin( ) && getPileta( ))
 			return 0.008 * getPrecio( );
