@@ -8,7 +8,7 @@ import tp3.ej1.cuentasBancarias.*;
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Disabled
+
 class TestCuentas5 {
 
 	private CuentaBancaria cajaAhorro1;

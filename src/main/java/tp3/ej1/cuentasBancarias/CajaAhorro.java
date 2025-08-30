@@ -1,39 +1,53 @@
 package tp3.ej1.cuentasBancarias;
 
 
-public class CajaAhorro extends CuentaBancaria {
+public class CajaAhorro extends CuentaBancaria  {
 
-    private double interesesGanados;
+  public static double comisionCA = 0;
 
-    public CajaAhorro(int numero, Cliente titular) {
-        super(numero, titular);
-        this.interesesGanados = 0;
+  private double interesesGanados;
+
+  public CajaAhorro(int numero, Cliente titular) {
+    super(numero, titular);
+    this.interesesGanados = 0;
+  }
+
+
+  public double getInteresesGanados() {
+    return interesesGanados;
+  }
+
+  public void setInteresesGanados(double valor) {
+    interesesGanados = valor;
+  }
+
+  public void pagarIntereses() {
+    setSaldo(getSaldo() + interesesGanados);
+    interesesGanados = 0;
+  }
+
+  // getters y setter para comisionCa
+  public static double getComisionCa() {
+    return comisionCA;
+  }
+  public static void setComisionCA(double valor) {
+    comisionCA = valor;
+  }
+
+  @Override
+  public void extraer(double monto) throws SaldoInsuficienteException {
+    if (getSaldo() < monto) {
+      throw new SaldoInsuficienteException("Saldo: " + getSaldo());
     }
+    setSaldo(getSaldo() - monto);
+  }
+  @Override
+  public double saldoDisponible() {
+    return getSaldo();
+  }
 
-
-    public double getInteresesGanados() {
-        return interesesGanados;
-    }
-
-    public void setInteresesGanados(double valor) {
-        interesesGanados = valor;
-    }
-
-    public void pagarIntereses() {
-        setSaldo(getSaldo() + interesesGanados);
-        interesesGanados = 0;
-    }
-
-    @Override
-    public void extraer(double monto) throws SaldoInsuficienteException {
-        if (getSaldo() < monto) {
-            throw new SaldoInsuficienteException("Saldo: " + getSaldo());
-        }
-        setSaldo(getSaldo() - monto);
-    }
-
-    @Override
-    public double saldoDisponible() {
-        return getSaldo();
-    }
+  @Override
+  public double obtenerComision() {
+    return getComisionCa();
+  }
 }

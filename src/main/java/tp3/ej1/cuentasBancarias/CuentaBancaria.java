@@ -1,40 +1,48 @@
 package tp3.ej1.cuentasBancarias;
 
 
-public abstract class CuentaBancaria {
+public abstract class CuentaBancaria implements OperacionBanco{
 
-    private int numero;
-    private Cliente titular;
-    private double saldo;
+  private int numero;
+  private Cliente titular;
+  private double saldo;
 
-    public CuentaBancaria(int numero, Cliente titular) {
-        titular.agregarCuenta(this);
-        this.numero = numero;
-        this.titular = titular;
-        this.saldo = 0;
-    }
 
-    public int getNumero() {
-        return numero;
-    }
+  public CuentaBancaria(int numero, Cliente titular) {
+    titular.agregarCuenta(this);
+    this.numero = numero;
+    this.titular = titular;
+    this.saldo = 0;
+  }
 
-    public Cliente getTitular() {
-        return titular;
-    }
+  public int getNumero() {
+    return numero;
+  }
 
-    public double getSaldo() {
-        return saldo;
-    }
+  public Cliente getTitular() {
+    return titular;
+  }
 
-    protected void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
+  public double getSaldo() {
+    return saldo;
+  }
 
-    public void depositar(double monto) {
-        saldo += monto;
-    }
+  protected void setSaldo(double saldo) {
+    this.saldo = saldo;
+  }
 
-    public abstract void extraer(double monto) throws SaldoInsuficienteException;
+  public void depositar(double monto) {
+    saldo += monto;
+  }
 
-    public abstract double saldoDisponible();
+  public abstract void extraer(double monto) throws SaldoInsuficienteException;
+
+  public abstract double saldoDisponible();
+
+  public abstract double obtenerComision();
+
+  @Override
+  public double obtenerSaldoDisponible() {
+    return saldoDisponible();
+  }
 }
