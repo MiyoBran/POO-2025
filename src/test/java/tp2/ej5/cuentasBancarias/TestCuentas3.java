@@ -1,10 +1,10 @@
 package tp2.ej5.cuentasBancarias;
 
-import static org.junit.Assert.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 class TestCuentas3 {
@@ -76,7 +76,7 @@ class TestCuentas3 {
 		new CajaAhorro(8798, ines);
 		assertEquals(ines.getCantidadCuentas(), 3);
 		new CajaAhorro(7988, ines);
-		new CajaAhorro(7989, ines);	
+		new CajaAhorro(7989, ines);
 		assertThrows(ClienteMaxCuentasException.class, () -> new CuentaCorriente(7012, ines, 0));
 	}
 
