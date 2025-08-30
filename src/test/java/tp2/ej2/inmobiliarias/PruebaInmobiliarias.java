@@ -1,8 +1,6 @@
 package tp2.ej2.inmobiliarias;
 
 
-import tp2.ej2.inmobiliarias.*;
-
 public class PruebaInmobiliarias {
 
 	public static void main (String[ ] p) {

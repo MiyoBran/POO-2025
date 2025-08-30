@@ -1,12 +1,12 @@
 package tp1.modelo;
 
-import static org.junit.Assert.assertEquals;
-
-import java.time.LocalDate;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.time.LocalDate;
+
+import static org.junit.Assert.assertEquals;
 
 
 
@@ -21,12 +21,12 @@ public class TestFerreteria3 {
 
 	@Before
 	public void antesDelTest() {
-		
+
 		des = ferreteria.agregarArticulo(10010, "destornillador", 150.20, 30);
 		mar = ferreteria.agregarArticulo(10020, "martillo", 250.00, 20);
 		pin = ferreteria.agregarArticulo(10030, "pinza", 350.00, 5);
-				
-		cliente1 = ferreteria.agregarCliente(100, "Juan", "20-24545789-3", "280-421-2322", "Roca 245");		
+
+		cliente1 = ferreteria.agregarCliente(100, "Juan", "20-24545789-3", "280-421-2322", "Roca 245");
 		cliente2 = ferreteria.agregarCliente(102, "Infa", "30-63062533-1", "445-9500", "Ruta 4, km 2");
 
 		factura1 = ferreteria.agregarFactura(100, LocalDate.of(2022, 8, 1), cliente1, des, 4, false);
@@ -47,12 +47,12 @@ public class TestFerreteria3 {
 		// System.out.println("Sale del test");
 	}
 
-	
+
 	@Test(expected = ClienteNuloException.class)
-	public void ventaCtaCteSinCliente() {		
+	public void ventaCtaCteSinCliente() {
 		ferreteria.agregarFactura(104,LocalDate.of(2022, 8, 5), null, mar, 2, true);
 	}
-	
+
 	@Test
 	public void totalFacturado() {
 		assertEquals(ferreteria.totalFacturado(LocalDate.of(2022, 8, 1), LocalDate.of(2022, 8, 31)), 4803.8, 0.01);

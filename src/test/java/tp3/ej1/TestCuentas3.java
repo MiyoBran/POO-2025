@@ -1,19 +1,11 @@
 package tp3.ej1;
 
-import static org.junit.Assert.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import tp3.ej1.cuentasBancarias.*;
 
-import carlosfontela.cuentas.CajaAhorro;
-import carlosfontela.cuentas.Cliente;
-import carlosfontela.cuentas.ClienteMaxCuentasException;
-import carlosfontela.cuentas.CuentaBancaria;
-import carlosfontela.cuentas.CuentaCorriente;
-import carlosfontela.cuentas.Empresa;
-import carlosfontela.cuentas.Persona;
-import carlosfontela.cuentas.SaldoInsuficienteException;
+import static org.junit.Assert.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestCuentas3 {
 

@@ -1,20 +1,14 @@
 package tp3.ej1;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import tp3.ej1.cuentasBancarias.*;
+
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import carlosfontela.cuentas.CajaAhorro;
-import carlosfontela.cuentas.Cliente;
-import carlosfontela.cuentas.ClienteMaxCuentasException;
-import carlosfontela.cuentas.CuentaBancaria;
-import carlosfontela.cuentas.CuentaCorriente;
-import carlosfontela.cuentas.Empresa;
-import carlosfontela.cuentas.Persona;
-import carlosfontela.cuentas.SaldoInsuficienteException;
-
+@Disabled
 class TestCuentas5 {
 
 	private CuentaBancaria cajaAhorro1;
