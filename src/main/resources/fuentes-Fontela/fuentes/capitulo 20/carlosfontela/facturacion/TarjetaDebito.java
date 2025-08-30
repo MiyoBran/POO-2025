@@ -5,7 +5,7 @@ public class TarjetaDebito extends FormaPago {
 	private String banco;
 	
 	public TarjetaDebito (String banco) {
-		super ("TARJETA DE DÉBITO");
+		super ("TARJETA DE DEBITO");
 		this.banco = banco;
 	}
 
