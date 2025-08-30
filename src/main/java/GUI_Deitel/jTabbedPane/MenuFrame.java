@@ -139,7 +139,7 @@ public class MenuFrame extends JFrame {
         // set up label to display text
         displayJLabel = new JLabel("Sample Text", SwingConstants.CENTER);
         displayJLabel.setForeground(colorValues[0]);
-        displayJLabel.setFont(new Font("Serif", Font.PLAIN, 72));
+        displayJLabel.setFont(new Font("Serif", style, 72));
 
         getContentPane().setBackground(Color.CYAN); // set background
         add(displayJLabel, BorderLayout.CENTER); // add displayJLabel
@@ -184,7 +184,7 @@ public class MenuFrame extends JFrame {
                 style += Font.ITALIC; // add italic to style
 
             displayJLabel.setFont(
-                    new Font(displayJLabel.getFont().getName(), style, 72));
+                    new Font(displayJLabel.getFont().getName(), Font.BOLD, 72));
             repaint(); // redraw application
         } // end method itemStateChanged
     } // end class StyleHandler
