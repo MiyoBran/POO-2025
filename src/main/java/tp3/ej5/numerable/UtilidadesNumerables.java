@@ -1,4 +1,4 @@
-package carlosfontela.utilidades;
+package tp3.ej5.numerable;
 
 public class UtilidadesNumerables {
 
