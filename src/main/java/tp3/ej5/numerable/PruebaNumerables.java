@@ -20,9 +20,9 @@ public class PruebaNumerables {
 
     System.out.println("Vector ordenado:");
     // imprimimos ordenado
-		System.out.println (v[0].toInt( ));
-		System.out.println (v[1].toInt( ));
-		System.out.println (v[2].toInt( ));
-		System.out.println (v[3].toInt( ));
+    for (Numerable indice : v) {
+      System.out.println("\n" + indice.toInt() + " - " + indice);
+      System.out.println(indice.mostrar());
+    }
 	}
 }

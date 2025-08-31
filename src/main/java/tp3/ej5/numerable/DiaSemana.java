@@ -19,6 +19,16 @@ public class DiaSemana implements Numerable {
 		return numeroDia;
 	}
 
+  // Muestra el contenido del objeto, y el numero que le corresponde.Ej: martes -> 2
+  @Override
+  public String mostrar() {
+    StringBuilder sb = new StringBuilder();
+    sb.append(nombreDia);
+    sb.append(" -> ");
+    sb.append(numeroDia);
+    return sb.toString();
+  }
+
   public String toString( ) {
     return nombreDia;
   }

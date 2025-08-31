@@ -58,6 +58,15 @@ public class FechaDC implements Numerable {
 		return sumaDias;
 	}
 
+  // Muestra el contenido del objeto, y el numero que le corresponde.Ej: martes -> 2
+  @Override
+  public String mostrar() {
+    StringBuilder sb = new StringBuilder();
+    sb.append(this.toString());
+    sb.append(" -> ");
+    sb.append(toInt());
+    return sb.toString();
+  }
   public String toString() {
     return dia + "/" + mes + "/" + anio;
   }
