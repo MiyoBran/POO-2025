@@ -1,13 +1,12 @@
-package tp3.ej1;
+package tp3.ej1.cuentasBancarias;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tp3.ej1.cuentasBancarias.*;
 
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TestCuentas2 {
+class TestCuentas4 {
 
 	private CuentaBancaria cajaAhorro1;
 	private CuentaBancaria cuentaCorriente1;
@@ -78,6 +77,53 @@ class TestCuentas2 {
 		new CajaAhorro(7988, ines);
 		new CajaAhorro(7989, ines);
 		assertThrows(ClienteMaxCuentasException.class, () -> new CuentaCorriente(7012, ines, 0));
+	}
+
+	@Test
+	void testSaldoTotal() {
+		CuentaBancaria cajaAhorro3 = new CajaAhorro(1234, empresa);
+		cajaAhorro3.depositar(1000.00);
+		cajaAhorro3.extraer(700.00);
+		cuentaCorriente2.extraer(700.00);
+		assertEquals(empresa.saldoTotal(), -400.00, 0.01);
+	}
+
+	@Test
+	void testSaldoDisponibleTotal() {
+		CuentaBancaria cajaAhorro3 = new CajaAhorro(1234, empresa);
+		cajaAhorro3.depositar(1000.00);
+		cajaAhorro3.extraer(700.00);
+		cuentaCorriente2.extraer(700.00);
+		assertEquals(empresa.saldoDisponibleTotal(), 1600.00, 0.01);
+	}
+
+//	@Test
+	void testPagarTarjetaCredito1() {
+		CuentaBancaria cajaAhorro3 = new CajaAhorro(2745, empresa);
+		cajaAhorro3.depositar(1000.00);
+		CuentaBancaria cajaAhorro4 = new CajaAhorro(4556, empresa);
+		cajaAhorro4.depositar(1000.00);
+		CuentaBancaria cuentaCorriente3 = new CuentaCorriente(6799, empresa, 2000);
+		cuentaCorriente3.depositar(1000.00);
+		assertEquals(empresa.saldoDisponibleTotal(), 7000.00, 0.01);
+		assertThrows(SaldoInsuficienteException.class, () -> empresa.pagarTarjetaCredito(10000.00));
+	}
+
+	@Test
+	void testPagarTarjetaCredito2() {
+		CuentaBancaria cajaAhorro3 = new CajaAhorro(2745, empresa);
+		cajaAhorro3.depositar(1000.00);
+		CuentaBancaria cajaAhorro4 = new CajaAhorro(4556, empresa);
+		cajaAhorro4.depositar(1000.00);
+		CuentaBancaria cuentaCorriente3 = new CuentaCorriente(6799, empresa, 2000);
+		cuentaCorriente3.depositar(1000.00);
+		assertEquals(empresa.saldoDisponibleTotal(), 7000.00, 0.01);
+		empresa.pagarTarjetaCredito(500.00);
+		empresa.pagarTarjetaCredito(1500.00);
+		assertEquals(cajaAhorro3.getSaldo(), 0.00, 0.01);
+		assertEquals(cajaAhorro4.getSaldo(), 0.00, 0.01);
+		empresa.pagarTarjetaCredito(500.00);
+		assertEquals(empresa.saldoDisponibleTotal(), 4500.00, 0.01);
 	}
 
 }

@@ -1,9 +1,7 @@
-package tp3.ej1;
+package tp3.ej1.cuentasBancarias;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import tp3.ej1.cuentasBancarias.*;
 
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;

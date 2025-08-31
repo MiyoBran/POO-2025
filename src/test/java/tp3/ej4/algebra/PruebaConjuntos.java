@@ -1,10 +1,7 @@
 // PruebaConjuntos.java
-package tp3.ej4;
+package tp3.ej4.algebra;
 
 import junit.framework.TestCase;
-import tp3.ej4.algebra.Conjunto;
-import tp3.ej4.algebra.ConjuntoArreglo;
-import tp3.ej4.algebra.ConjuntoBits;
 
 public class PruebaConjuntos extends TestCase {
 

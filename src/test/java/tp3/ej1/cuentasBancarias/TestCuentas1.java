@@ -1,13 +1,13 @@
-package tp3.ej1;
+package tp3.ej1.cuentasBancarias;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tp3.ej1.cuentasBancarias.*;
 
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TestCuentas3 {
+
+class TestCuentas1 {
 
 	private CuentaBancaria cajaAhorro1;
 	private CuentaBancaria cuentaCorriente1;
@@ -19,7 +19,6 @@ class TestCuentas3 {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		Cliente.setMaximoCuentas(5);
 		juan = new Persona("Juan", "P�rez", 5122122, "Lima", 444, "Belgrano", "Venezuela", "C1000AAA", "01140101010",
 				"juan@perez.com.ar");
 		ines = new Persona("In�s", "Garc�a", 4011011, "Cerrito", 1111, "Santa Fe", "Arenales", "C1111ZZZ",
@@ -68,34 +67,6 @@ class TestCuentas3 {
 		assertEquals(cuentaCorriente2.getSaldo(), -1400, 0.01);
 		Exception exception = assertThrows(SaldoInsuficienteException.class, () -> cuentaCorriente2.extraer(700.00));
 		assertEquals(exception.getMessage(), "Saldo: " + cuentaCorriente2.getSaldo());
-	}
-
-	@Test
-	void testMaximoCuentas() {
-		assertEquals(ines.getCantidadCuentas(), 2);
-		new CajaAhorro(8798, ines);
-		assertEquals(ines.getCantidadCuentas(), 3);
-		new CajaAhorro(7988, ines);
-		new CajaAhorro(7989, ines);
-		assertThrows(ClienteMaxCuentasException.class, () -> new CuentaCorriente(7012, ines, 0));
-	}
-
-	@Test
-	void testSaldoTotal() {
-		CuentaBancaria cajaAhorro3 = new CajaAhorro(1234, empresa);
-		cajaAhorro3.depositar(1000.00);
-		cajaAhorro3.extraer(700.00);
-		cuentaCorriente2.extraer(700.00);
-		assertEquals(empresa.saldoTotal(), -400.00, 0.01);
-	}
-
-	@Test
-	void testSaldoDisponibleTotal() {
-		CuentaBancaria cajaAhorro3 = new CajaAhorro(1234, empresa);
-		cajaAhorro3.depositar(1000.00);
-		cajaAhorro3.extraer(700.00);
-		cuentaCorriente2.extraer(700.00);
-		assertEquals(empresa.saldoDisponibleTotal(), 1600.00, 0.01);
 	}
 
 }

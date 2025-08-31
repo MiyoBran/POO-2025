@@ -6,6 +6,7 @@ public interface Conjunto {
 	Conjunto union (Conjunto b);
 	Conjunto interseccion (Conjunto b);
 	Conjunto diferencia (Conjunto b);
+  Conjunto diferenciaSimetrica (Conjunto b);
 	boolean pertenece (int x);
 	boolean incluido (Conjunto b);
 	boolean vacio( );

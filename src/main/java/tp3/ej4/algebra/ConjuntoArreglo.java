@@ -1,6 +1,8 @@
 // ConjuntoArreglo.java
 package tp3.ej4.algebra;
 
+import java.util.HashMap;
+
 public class ConjuntoArreglo extends BaseConjunto {
 
 	private boolean[ ] implementacion;

@@ -1,7 +1,6 @@
-package tp3.ej1;
+package tp3.ej1.cuentasBancarias;
 
 import junit.framework.TestCase;
-import tp3.ej1.cuentasBancarias.*;
 
 public class PruebaCuentas extends TestCase {
 
