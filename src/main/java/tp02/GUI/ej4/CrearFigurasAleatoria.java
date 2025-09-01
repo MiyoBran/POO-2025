@@ -3,6 +3,8 @@ package tp02.GUI.ej4;
 import tp02.GUI.ej3.Figura;
 import tp02.GUI.ej3.Elipse;
 import tp02.GUI.ej3.Punto;
+import tp02.GUI.ej3.Poligono;
+import tp02.GUI.ej3.FiguraCompuesta;
 
 import javax.swing.*;
 import java.awt.*;
@@ -64,7 +66,7 @@ public class CrearFigurasAleatoria {
           boolean esRelleno = rand.nextBoolean();
           Color colorElipse = new Color(rand.nextInt(COLOR_MAX), rand.nextInt(COLOR_MAX), rand.nextInt(COLOR_MAX));
           // Crear la elipse y asignarla al array
-          figuras[i]  = new Elipse(radioX, radioY, new Punto(xCentro, yCentro), 0, esRelleno, colorElipse);
+          figuras[i] = new Elipse(radioX, radioY, new Punto(xCentro, yCentro), 0, esRelleno, colorElipse);
           break;
 
         case 1: // Poligono
@@ -92,6 +94,52 @@ public class CrearFigurasAleatoria {
               int yC = rand.nextInt(rY, alto - rY);
               boolean esCirc = rand.nextBoolean();
               Color cElipse = new Color(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256));
-              componentes[k] = new tp02.GUI.ej3.Elipse(rX, rY, new tp02.GUI.ej3.Punto(xC, y
+              componentes[k] = new Elipse(rX, rY, new Punto(xC, yC), 0, esCirc, cElipse);
+            } else { // Poligono
+              int nVertices = rand.nextInt(3, 7);
+              Punto[] verts = new Punto[nVertices];
+              for (int m = 0; m < nVertices; m++) {
+                int xV = rand.nextInt(0, ancho);
+                int yV = rand.nextInt(0, alto);
+                verts[m] = new Punto(xV, yV);
+              }
+              Color cPoligono = new Color(rand.nextInt(256), rand.nextInt(256), rand.nextInt(256));
+              boolean esRell = rand.nextBoolean();
+              componentes[k] = new Poligono(verts, cPoligono, esRell);
+            }
+          }
+          figuras[i] = new FiguraCompuesta(componentes);
+          break;
+      }
+    }
+    return figuras;
+  }
+  private Figura crearElipseAleatoria(int ancho, int alto) {
+    Random rand = new Random();
+    // RadioX y RadioY entre 20 y 100 (son el radio en x e y)
+    int radioX = rand.nextInt(RADIO_MIN, RADIO_MAX);
+    int radioY = rand.nextInt(RADIO_MIN, RADIO_MAX);
+    // Asegurar que el centro permita que la elipse quepa en el área
+    int xCentro = rand.nextInt(radioX, ancho - radioX);
+    int yCentro = rand.nextInt(radioY, alto - radioY);
+    // Nuevas propiedades
+    boolean esRelleno = rand.nextBoolean();
+    Color colorElipse = new Color(rand.nextInt(COLOR_MAX), rand.nextInt(COLOR_MAX), rand.nextInt(COLOR_MAX));
+    // Crear la elipse y asignarla al array
+    return new Elipse(radioX, radioY, new Punto(xCentro, yCentro), 0, esRelleno, colorElipse);
+  }
+
+  private Figura crearPoligonoAleatorio(int ancho, int alto) {
+    Random rand = new Random();
+    int numVertices = rand.nextInt(VERTICES_MIN, VERTICES_MAX); // Entre 3 y 7 vertices
+    Punto[] vertices = new Punto[numVertices];
+    for (int j = 0; j < numVertices; j++) {
+      int xVertice = rand.nextInt(0, ancho);
+      int yVertice = rand.nextInt(0, alto);
+      vertices[j] = new Punto(xVertice, yVertice);
+    }
+    Color colorPoligono = new Color(rand.nextInt(COLOR_MAX), rand.nextInt(COLOR_MAX), rand.nextInt(COLOR_MAX));
+    boolean relleno = rand.nextBoolean();
+    return new Poligono(vertices, colorPoligono, relleno);
   }
 }
