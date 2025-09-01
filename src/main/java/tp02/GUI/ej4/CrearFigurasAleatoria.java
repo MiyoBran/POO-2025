@@ -56,17 +56,8 @@ public class CrearFigurasAleatoria {
 
       switch (tipoFigura) {
         case 0: // Elipse
-          // RadioX y RadioY entre 20 y 100 (son el radio en x e y)
-          int radioX = rand.nextInt(RADIO_MIN, RADIO_MAX);
-          int radioY = rand.nextInt(RADIO_MIN, RADIO_MAX);
-          // Asegurar que el centro permita que la elipse quepa en el área
-          int xCentro = rand.nextInt(radioX, ancho - radioX);
-          int yCentro = rand.nextInt(radioY, alto - radioY);
-          // Nuevas propiedades
-          boolean esRelleno = rand.nextBoolean();
-          Color colorElipse = new Color(rand.nextInt(COLOR_MAX), rand.nextInt(COLOR_MAX), rand.nextInt(COLOR_MAX));
-          // Crear la elipse y asignarla al array
-          figuras[i] = new Elipse(radioX, radioY, new Punto(xCentro, yCentro), 0, esRelleno, colorElipse);
+
+          figuras[i] = new crearElipseAleatoria(ancho, alto);
           break;
 
         case 1: // Poligono
