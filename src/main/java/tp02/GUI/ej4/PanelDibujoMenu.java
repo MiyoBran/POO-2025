@@ -15,8 +15,8 @@ public class PanelDibujoMenu extends JPanel {
   private final Figura[] figuras;
   private final JPanel panelDibujo;
   private int figuraSeleccionada = -1; // -1: ninguna, 0: todas, >0: índice-1
-  private int paso = 10;
-  private Color colorActual = Color.BLACK;
+  private int paso = 10; // Paso por defecto
+  private Color colorActual = Color.BLACK; // Color por defecto
 
   /**
    * Constructor que recibe una lista de figuras a dibujar
