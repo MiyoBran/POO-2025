@@ -41,7 +41,6 @@ public abstract class CuentaBancaria implements OperacionBanco{
 
   public abstract double obtenerComision();
 
-  @Override
   public double obtenerSaldoDisponible() {
     return saldoDisponible();
   }

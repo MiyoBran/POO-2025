@@ -53,7 +53,7 @@ public abstract class BaseConjunto implements Conjunto {
 
   /* La diferencia clásica debe devolver los elementos que están en this pero no en b.*/
   public Conjunto diferencia(Conjunto b) {
-       Conjunto c = this.clonar();
+    Conjunto c = this.clonar();
     for (int i = 0; i < c.getBase(); i++) {
       if (this.pertenece(i) && b.pertenece(i)) {
         c.sacarElemento(i);

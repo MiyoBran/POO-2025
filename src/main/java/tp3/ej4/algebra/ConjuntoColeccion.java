@@ -1,6 +1,8 @@
 package tp3.ej4.algebra;
 
 import java.util.HashMap;
+import java.util.HashSet;
+
 
 public class ConjuntoColeccion extends BaseConjunto {
 
