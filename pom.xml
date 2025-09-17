@@ -15,12 +15,11 @@
 
   <properties>
     <java.version>21</java.version>
-    <maven.compiler.source>${java.version}</maven.compiler.source>
-    <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <!-- Versiones centralizadas -->
+    <javafx.version>21.0.8</javafx.version>
     <junit.jupiter.version>5.11.3</junit.jupiter.version>
     <junit4.version>4.13.2</junit4.version>
     <hamcrest.version>2.2</hamcrest.version>
@@ -31,6 +30,18 @@
   </properties>
 
   <dependencies>
+
+    <!-- Dependencias de JavaFX -->
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-controls</artifactId>
+      <version>${javafx.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-fxml</artifactId>
+      <version>${javafx.version}</version>
+    </dependency>
     <!-- JUnit 5 (API + Engine) -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -66,6 +77,15 @@
 
   <build>
     <plugins>
+      <!-- Plugin para JavaFX -->
+      <plugin>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.8</version>
+        <configuration>
+          <mainClass>com.miyo.poo2025.App</mainClass>
+        </configuration>
+      </plugin>
       <!-- Compilador Maven -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -83,11 +103,6 @@
         <version>${maven.surefire.plugin.version}</version>
         <configuration>
           <useModulePath>false</useModulePath>
-          <includes>
-            <include>**/*Test.java</include>
-            <include>**/*Tests.java</include>
-            <include>**/*TestCase.java</include>
-          </includes>
         </configuration>
       </plugin>
 
@@ -96,9 +111,6 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>${exec.maven.plugin.version}</version>
-        <configuration>
-          <mainClass>tp1.facultad.Facultad</mainClass>
-        </configuration>
       </plugin>
 
       <!-- Checkstyle plugin -->
