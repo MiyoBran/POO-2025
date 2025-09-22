@@ -1,4 +1,4 @@
-package holafx; // 
+package pruebas; // 
 
 import javafx.application.Application;
 import javafx.scene.Scene;
