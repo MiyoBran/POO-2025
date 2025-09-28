@@ -3,9 +3,11 @@ package tp4.ej6.taxi;
 public class Taxi implements Runnable {
 	private int id;
 	private ParadaTaxi parada;
+	private static int cantTaxis = 0;
 
-	public Taxi(int id, ParadaTaxi parada) {
-		this.id = id;
+	public Taxi(ParadaTaxi parada) {
+		cantTaxis++;
+		this.id = cantTaxis;
 		this.parada = parada;
 	}
 

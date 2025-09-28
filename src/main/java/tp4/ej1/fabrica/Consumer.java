@@ -1,3 +1,5 @@
+package tp4.ej1.fabrica;
+
 // Fig. 23.8: Consumer.java
 // Consumer's run method loops ten times reading a value from buffer.
 import java.util.Random;

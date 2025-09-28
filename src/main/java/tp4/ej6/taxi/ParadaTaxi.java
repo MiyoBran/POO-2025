@@ -13,6 +13,17 @@ public class ParadaTaxi {
 		Taxi taxi = buffer.set();
 		System.out.println("Pasajero " + pasajero.getId() + " subiendo al taxi " + taxi.getId());
 	}
+
+	public void get(Taxi taxi) {
+		// TODO Auto-generated method stub
+		try {
+			buffer.get(taxi);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 	
 
 }

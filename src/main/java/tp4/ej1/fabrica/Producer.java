@@ -1,3 +1,5 @@
+package tp4.ej1.fabrica;
+
 // Fig. 23.7: Producer.java
 // Producer's run method stores the values 1 to 10 in buffer.
 import java.util.Random;

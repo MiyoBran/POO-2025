@@ -1,3 +1,5 @@
+package tp4.ej1.fabrica;
+
 // Fig 23.23: SharedBufferTest2.java
 // Two threads manipulating a synchronized buffer.
 import java.util.concurrent.ExecutorService;

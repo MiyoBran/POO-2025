@@ -1,3 +1,5 @@
+package tp4.ej1.fabrica;
+
 // Fig. 23.22: SynchronizedBuffer.java
 // Synchronizes access to a shared integer using the Lock and Condition
 // interfaces

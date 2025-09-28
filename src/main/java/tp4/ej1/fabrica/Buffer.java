@@ -1,3 +1,5 @@
+package tp4.ej1.fabrica;
+
 // Fig. 23.11: Buffer.java
 // Buffer interface specifies methods called by Producer and Consumer.
 public interface Buffer
