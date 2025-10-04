@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class Factura {
     //Inner-Class
-    private class ItemFactura {
+    private static class ItemFactura {
         private Articulo articulo;
         private int cantidad;
         private double precio;

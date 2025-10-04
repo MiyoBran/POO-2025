@@ -1,12 +1,12 @@
 package tp1.modelo;
 
-import static org.junit.Assert.assertEquals;
-
-import java.time.LocalDate;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.time.LocalDate;
+
+import static org.junit.Assert.assertEquals;
 
 
 public class TestFerreteria2 {

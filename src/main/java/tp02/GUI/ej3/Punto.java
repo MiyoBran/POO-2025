@@ -45,7 +45,7 @@ public class Punto {
 					Math.pow((coordY-otro.coordY),2) );
 		}
 
-		public String toString( ) {
-			return new Double(getX( )).toString( ) + ";" + new Double(getY( )).toString( );
-		}
+  public String toString() {
+    return getX() + ";" + getY();
+  }
 }

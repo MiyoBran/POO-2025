@@ -17,13 +17,6 @@ public abstract class Cliente {
         this.cantidadCuentas = 0;
     }
 
-    public Domicilio getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(Domicilio valor) {
-        direccion = valor;
-    }
 
     public String getEmail() {
         return email;
@@ -102,7 +95,7 @@ public abstract class Cliente {
         }
     }
 
-    private class Domicilio {
+    private static class Domicilio {
         String calle;
         int numero;
         String entre1;
