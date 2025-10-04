@@ -81,9 +81,9 @@
 				<groupId>org.openjfx</groupId>
 				<artifactId>javafx-maven-plugin</artifactId>
 				<version>0.0.8</version>
-				<configuration>
-					<mainClass>${main.class}</mainClass>
-				</configuration>
+        <configuration>
+          <mainClass>pruebas.LoginSimple</mainClass>
+        </configuration>
 			</plugin>
 			<!-- Compilador Maven -->
 			<plugin>
